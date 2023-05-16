@@ -1,0 +1,60 @@
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  background-color: #fafafa;
+  border-bottom: 1px solid #c9c9c9;
+
+  .ph-navbar {
+    height: 80px;
+    background: #ffffff;
+  }
+
+  .ph-logo {
+    font-family: Overpass, serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 41px;
+  }
+
+  .p-sidebar {
+    padding: 0 !important;
+  }
+
+  .auth-logo {
+    display: flex;
+    align-items: center;
+    .ph-enter {
+      font-family: 'Overpass', serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+}
+
+.ph-start-work {
+  background-color: #FFFEEE;
+
+  .ph-main-text {
+    font-family: 'Overpass', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 63px;
+  }
+}
+
+.ph-try-our-app {
+  background-color: #F5F5F5;
+
+  .ph-try-our-app-text {
+    font-family: 'Overpass', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 46px;
+  }
+}

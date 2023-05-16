@@ -1,0 +1,46 @@
+<div class="ph-main-page">
+  <div class="navbar">
+    <div style="display: flex; align-items: center; margin: 20px 0 20px 50px">
+      <img src="/assets/mainPage.png" alt="logo" style="max-width: 50px; max-height: 45px">
+      <div class="ph-logo">
+        ProjectHive
+      </div>
+      <div style="flex-grow: 1; display: flex; justify-content: center">
+        <p-button label="Почтаи роботу" styleClass="p-button-secondary p-button-text"></p-button>
+        <p-button [style]="{marginLeft: '20px'}" label="Ціни" styleClass="p-button-secondary p-button-text"></p-button>
+        <p-button [style]="{marginLeft: '20px'}" label="Можливості" styleClass="p-button-secondary p-button-text"></p-button>
+      </div>
+      <div [pTooltip]="'Увійти в аккаунт'"
+           [tooltipPosition]="'left'"
+           class="auth-logo" style="margin-right: 25px">
+        <p-button icon="pi pi-user" styleClass="p-button-rounded p-button-info p-button-outlined"></p-button>
+      </div>
+    </div>
+  </div>
+  <div class="ph-start-work" style="width: 100%; height: 800px">
+    <div style="display: flex; align-items: center; justify-content: center; height: 100vh;">
+      <div>
+        <div class="ph-main-text" style="margin-bottom: 50px; max-width: 600px">
+          Ефективно керуй проектами,
+          використовуючи
+          ProjectHive
+        </div>
+        <div>
+          <p-button label="Почати роботу" styleClass="p-button-warning"></p-button>
+        </div>
+      </div>
+      <div class="ph-first-img">
+        <img src="assets/main-image-1.jpg" alt="mainImg">
+      </div>
+    </div>
+  </div>
+  <div class="ph-try-our-app" style="display: flex; align-items: center; justify-content: center; height: 100vh">
+    <div class="ph-try-our-app-text" style="max-width: 600px; margin-right: 100px">
+      Спробуй наші зручні інструменти
+      для керування задачами
+    </div>
+    <div class="ph-main-img-2">
+      <img src="assets/main-image-2.jpg" alt="mainImg2">
+    </div>
+  </div>
+</div>
