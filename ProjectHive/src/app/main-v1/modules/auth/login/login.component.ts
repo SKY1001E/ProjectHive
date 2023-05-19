@@ -1,4 +1,5 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import {AfterViewInit, Component, Inject, OnInit} from '@angular/core';
+import {UiPartService} from "../../../services/uiParts.service";
 
 @Component({
   selector: 'app-login',
@@ -7,16 +8,17 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit, AfterViewInit {
 
-  constructor() {
-
+  constructor(
+    private uiPart: UiPartService
+  ) {
   }
 
   ngOnInit(): void {
-    
+    this.uiPart.showMainNavbar.next(false)
   }
 
   ngAfterViewInit(): void {
-    
+
   }
 
 }

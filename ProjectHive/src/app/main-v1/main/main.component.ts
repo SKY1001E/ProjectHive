@@ -1,4 +1,5 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
+import {UiPartService} from "../services/uiParts.service";
 
 @Component({
   selector: 'app-main',
@@ -8,13 +9,17 @@ import {AfterViewInit, Component, OnInit} from '@angular/core';
 export class MainComponent implements OnInit, AfterViewInit{
   isVisibleNav = true;
 
-  constructor() {
+  constructor(
+    public uiParts: UiPartService
+  ) {
+  }
+
+  ngOnInit(): void {
+    this.uiParts.showMainNavbar.subscribe(val => {
+      this.isVisibleNav = val;
+    })
   }
 
   ngAfterViewInit(): void {
   }
-
-  ngOnInit(): void {
-  }
-
 }

@@ -8,15 +8,13 @@ import { MainComponent } from './main-v1/main/main.component';
 import {SidebarModule} from "primeng/sidebar";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {TooltipModule} from "primeng/tooltip";
-import { LoginComponent } from './main-v1/modules/auth/login/login.component';
-import { RegistrationComponent } from './main-v1/modules/auth/registration/registration.component';
+import { StartLayoutComponent } from './main-v1/components/start-layout/start-layout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    LoginComponent,
-    RegistrationComponent
+    StartLayoutComponent
   ],
   imports: [
     BrowserModule,

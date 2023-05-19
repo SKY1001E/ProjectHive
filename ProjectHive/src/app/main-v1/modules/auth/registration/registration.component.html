@@ -1,7 +1,7 @@
 <div class="ph-login-page">
     <div class="navbar">
         <div class="button-container" style="position: absolute; left: 0; top: 0;">
-            <p-button label="На головну" [routerLink]="['/main']" styleClass="p-button-secondary p-button-text"></p-button>
+            <p-button label="На головну" [routerLink]="['../../']" styleClass="p-button-secondary p-button-text"></p-button>
         </div>
         <div class="logo-container" style="display: flex; align-items: center;">
             <img src="/assets/mainPage.png" alt="logo" class="logo" style="display: block; margin-right: 10px;">
@@ -10,10 +10,10 @@
             </div>
         </div>
     </div>
-    <button class="button-registration" [routerLink]="['/login']" style="margin-top: 100px; margin-left: 350px; max-width: 600px">
+    <button class="button-registration" [routerLink]="['/sign', 'in']" style="margin-top: 100px; margin-left: 350px; max-width: 600px">
         Перейти до авторизації
     </button>
-    
+
     <div class="login_background">
         <img src="/assets/Rectangle 15.png" alt="background" class="logo">
         <div class="login-label" style="margin-bottom: 10px;">
@@ -40,8 +40,5 @@
                 Sign up with Google
             </button>
         </div>
-    </div>        
-    <div class="footer">
-        © ProjectHive 2023
     </div>
 </div>

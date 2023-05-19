@@ -18,10 +18,6 @@
     line-height: 41px;
   }
 
-  .p-sidebar {
-    padding: 0 !important;
-  }
-
   .auth-ph-login-logo {
     display: flex;
     align-items: center;
@@ -35,37 +31,13 @@
   }
 }
 
-.ph-start-work {
-  background-color: #FFFEEE;
-
-  .ph-main-text {
-    font-family: 'Overpass', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 45px;
-    line-height: 63px;
-  }
-}
-
-.ph-try-our-app {
-  background-color: #F5F5F5;
-
-  .ph-try-our-app-text {
-    font-family: 'Overpass', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 46px;
-  }
-}
-
 .ph-footer {
   background: #C8C8C8;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 115px;
+  height: 75px;
 
   .ph-footer-content {
     font-family: 'Overpass', sans-serif;
