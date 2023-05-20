@@ -3,14 +3,11 @@
         <div class="button-container" style="position: absolute; left: 0; top: 0;">
             <p-button label="На головну" [routerLink]="['../../']" styleClass="p-button-secondary p-button-text"></p-button>
         </div>
-        <div class="logo-container" style="display: flex; align-items: center;">
-            <img src="/assets/mainPage.png" alt="logo" class="logo" style="display: block; margin-right: 10px;">
-            <div class="ph-login-logo">
-                ProjectHive
-            </div>
+        <div class="logo-container" style="display: flex; align-items: center; max-height: 80px;">
+            <img src="/assets/logo.png" alt="logo" class="logo" style="height: 100%; display: block; margin-right: 10px;">
         </div>
     </div>
-    <button class="button-registration" [routerLink]="['/sign', 'up']" style="margin-top: 100px; margin-left: 350px; max-width: 600px">
+    <button class="button-registration" [routerLink]="['/sign', 'up']" style="margin-top: 80px; margin-left: 350px; max-width: 600px">
         Перейти до реєстрації
     </button>
 
@@ -34,7 +31,7 @@
             <button type="button">Увійти</button>
         </div>
 
-        <div class="sign-button" style="margin-top: 50px;">
+        <div class="sign-button" style="margin-top: 30px;">
             <button type="button">
                 <img src="/assets/googleimg.png" alt="Google logo" class="google-logo" style="display: inline-block; vertical-align: middle; margin-right: 10px;">
                 Sign up with Google
