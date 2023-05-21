@@ -1,0 +1,32 @@
+<div class="ph-project-page">
+    <div class="header" style="box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin: 25px 0 10px 50px">
+            <div class="ph-logo" style="margin-top: -5px;">
+                <img src="/assets/logo.png" alt="logo" style="max-height: 40px; margin-bottom: 20px; height: 100%">
+            </div>
+            <div style="display: flex; align-items: center; flex-grow: 1; justify-content: center;">
+                <p-button [style]="{marginLeft: '20px', marginBottom:'18px'}" label="Проекти" styleClass="p-button-secondary p-button-text"></p-button>
+                <p-button [style]="{marginLeft: '20px', marginBottom:'18px'}" label="Календар" styleClass="p-button-secondary p-button-text"></p-button>
+            </div>
+            <div>
+                <p-button icon="pi pi-bell" styleClass="p-button-rounded p-button-warning p-button-outlined" [style]="{marginRight: '10px',  marginBottom:'18px'}"></p-button>
+                <p-button icon="pi pi-question" styleClass="p-button-rounded p-button-warning p-button-outlined" [style]="{marginRight: '10px',  marginBottom:'18px'}"></p-button>
+                <p-button icon="pi pi-user" styleClass="p-button-rounded p-button-warning p-button-outlined" [style]="{marginRight: '20px', marginBottom:'18px'}"></p-button>
+            </div>
+        </div>
+    </div>
+    <div class="ph-text" style="max-width: 600px">
+        Проекти
+        <div class="search-bar">
+            <input id="search-input" type="text" placeholder="Пошук..." style="border: 1px solid #ccc; border-radius: 4px; padding: 8px 12px; margin-bottom: 50px; margin-top: 20px; font-size: 16px;">
+        </div>
+        <div class="project-button">
+            <button type="button">Створити проект</button>
+        </div>
+        <p-tabMenu [model]="items" [activeItem]="activeItem" class="full-width-tabmenu-wide">
+            <ng-template pTemplate="item" let-item>
+              {{ item.label }}
+            </ng-template>
+        </p-tabMenu>
+    </div>
+</div>
