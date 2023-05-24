@@ -5,6 +5,8 @@ import {LoginComponent} from "./main-v1/modules/auth/login/login.component";
 import {RegistrationComponent} from "./main-v1/modules/auth/registration/registration.component";
 import { ProjectPageComponent } from "./main-v1/modules/projects/projectpage/projectpage.component";
 import {StartLayoutComponent} from "./main-v1/components/start-layout/start-layout.component";
+import {PricingComponent} from "./main-v1/modules/infopages/pricing/pricing.component";
+import {CapabilitiesComponent} from "./main-v1/modules/infopages/capabilities/capabilities.component";
 
 const routes: Routes = [
   {path: '', component: MainComponent,
@@ -16,8 +18,8 @@ const routes: Routes = [
       },
       {path: 'register', component: RegistrationComponent},
       {path: 'projectpage', component: ProjectPageComponent},
-
-
+      {path: 'prices', component: PricingComponent},
+      {path: 'capabilities', component: CapabilitiesComponent}
     ]
   }
 ];
