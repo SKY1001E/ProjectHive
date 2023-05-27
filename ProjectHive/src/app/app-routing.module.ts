@@ -14,10 +14,7 @@ const routes: Routes = [
       {path: 'sign',
         loadChildren: () => import('../app/main-v1/modules/auth/auth.module').then(m => m.AuthModule)
       },
-      {path: 'register', component: RegistrationComponent},
-      {path: 'projectpage', component: ProjectPageComponent},
-
-
+      {path: 'project-page', component: ProjectPageComponent},
     ]
   }
 ];
