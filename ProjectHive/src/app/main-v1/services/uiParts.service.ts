@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable, TemplateRef} from '@angular/core';
 import {BehaviorSubject, Subject} from "rxjs";
 
 @Injectable({
@@ -7,6 +7,7 @@ import {BehaviorSubject, Subject} from "rxjs";
 export class UiPartService {
 
   showMainNavbar: Subject<boolean> = new Subject<boolean>();
+  headerTemplate!: TemplateRef<any>;
 
   constructor() { }
 }

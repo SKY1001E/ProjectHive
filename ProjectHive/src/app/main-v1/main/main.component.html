@@ -1,20 +1,6 @@
 <div class="ph-main-page">
   <div *ngIf="isVisibleNav" class="navbar">
-    <div style="display: flex; align-items: center; margin: 10px 0 10px 50px">
-      <div [routerLink]="['/new']" class="ph-logo">
-            <img src="/assets/logo.png" alt="logo" style="max-height: 45px; height: 100%">
-      </div>
-      <div style="flex-grow: 1; display: flex; justify-content: center">
-        <p-button label="Почати роботу" [routerLink]="['/project-page']"styleClass="p-button-secondary p-button-text"></p-button>
-        <p-button [style]="{marginLeft: '20px'}" [routerLink]="['/prices']" label="Ціни" styleClass="p-button-secondary p-button-text"></p-button>
-        <p-button [style]="{marginLeft: '20px'}" [routerLink]="['/capabilities']" label="Можливості" styleClass="p-button-secondary p-button-text"></p-button>
-      </div>
-      <div [pTooltip]="'Увійти в аккаунт'"
-           [tooltipPosition]="'left'"
-           class="auth-logo" style="margin-right: 25px">
-        <p-button icon="pi pi-user" [routerLink]="['/sign']" styleClass="p-button-rounded p-button-info p-button-outlined"></p-button>
-      </div>
-    </div>
+    <ng-container *ngTemplateOutlet="mainNavBar"></ng-container>
   </div>
   <router-outlet></router-outlet>
   <div class="ph-footer">
@@ -23,3 +9,22 @@
     </div>
   </div>
 </div>
+
+
+<ng-template #mainNavBar>
+  <div style="display: flex; align-items: center; margin: 10px 0 10px 50px">
+    <div [routerLink]="['/new']" class="ph-logo">
+      <img src="/assets/logo.png" alt="logo" style="max-height: 45px; height: 100%">
+    </div>
+    <div style="flex-grow: 1; display: flex; justify-content: center">
+      <p-button label="Почати роботу" [routerLink]="['/project-page']"styleClass="p-button-secondary p-button-text"></p-button>
+      <p-button [style]="{marginLeft: '20px'}" [routerLink]="['/prices']" label="Ціни" styleClass="p-button-secondary p-button-text"></p-button>
+      <p-button [style]="{marginLeft: '20px'}" [routerLink]="['/capabilities']" label="Можливості" styleClass="p-button-secondary p-button-text"></p-button>
+    </div>
+    <div [pTooltip]="'Увійти в аккаунт'"
+         [tooltipPosition]="'left'"
+         class="auth-logo" style="margin-right: 25px">
+      <p-button icon="pi pi-user" [routerLink]="['/sign']" styleClass="p-button-rounded p-button-info p-button-outlined"></p-button>
+    </div>
+  </div>
+</ng-template>

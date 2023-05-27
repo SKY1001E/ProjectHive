@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, Inject, OnInit} from '@angular/core';
+import {AfterViewInit, Component, Inject, OnInit, TemplateRef, ViewChild} from '@angular/core';
 import {UiPartService} from "../../../services/uiParts.service";
 
 @Component({
@@ -7,6 +7,7 @@ import {UiPartService} from "../../../services/uiParts.service";
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit, AfterViewInit {
+
 
   constructor(
     private uiPart: UiPartService
