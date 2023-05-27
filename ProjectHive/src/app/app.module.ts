@@ -9,12 +9,16 @@ import {SidebarModule} from "primeng/sidebar";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {TooltipModule} from "primeng/tooltip";
 import { StartLayoutComponent } from './main-v1/components/start-layout/start-layout.component';
+import { PricingComponent } from './main-v1/modules/infopages/pricing/pricing.component';
+import { CapabilitiesComponent } from './main-v1/modules/infopages/capabilities/capabilities.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    StartLayoutComponent
+    StartLayoutComponent,
+    PricingComponent,
+    CapabilitiesComponent,
   ],
   imports: [
     BrowserModule,

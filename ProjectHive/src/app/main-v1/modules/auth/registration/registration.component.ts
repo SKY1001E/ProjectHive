@@ -12,7 +12,7 @@ export class RegistrationComponent implements OnInit, AfterViewInit{
   }
 
   ngOnInit(): void {
-    this.uiPart.showMainNavbar.next(false)
+    this.uiPart.showMainNavbar.next(false);
   }
 
   ngAfterViewInit(): void {

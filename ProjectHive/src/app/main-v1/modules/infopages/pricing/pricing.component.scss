@@ -1,0 +1,73 @@
+
+.ph-pricing {
+    padding-top: 100px;
+    background: #FFFEEE;
+}
+
+.container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.price-table-container {
+    display: flex;
+    justify-content: center;
+}
+
+.ph-pricing__title {
+    text-align: center;
+    padding-top: 10px;
+
+    .subtitle {
+        margin: 10px;
+    }
+}
+
+.price-table {
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+    border-collapse: collapse;
+    background-color: white;
+
+
+    .price-table__crierie {
+        text-align: left;
+        max-width: 200px;
+    }
+    
+    td {
+        padding: 20px 20px;
+        margin: 0px;
+        border: 1px solid rgb(202, 202, 202);
+        font-size: 18px;
+    }
+
+    th {
+        background-color: rgb(235, 235, 235);
+        max-width: 200px;
+        padding: 10px 40px;
+        font-size: 20px;
+        border: 1px solid rgb(202, 202, 202);
+    }
+}
+
+.back-arrow {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 16px;
+    color:#313131;
+    cursor: pointer;
+}
+
+.back-arrow:hover {
+    color:#646464;
+}
+
+@media (min-height: 800px) {
+    .ph-pricing {
+        height: 100vh;
+    }
+}

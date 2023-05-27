@@ -1,5 +1,5 @@
 <div class="ph-project-page">
-    <div class="header" style="box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);">
+    <div class="header ph-header" style="box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);">
         <div style="display: flex; align-items: center; justify-content: space-between; margin: 25px 0 10px 50px">
             <div class="ph-logo" style="margin-top: -5px;">
                 <img src="/assets/logo.png" alt="logo" style="max-height: 40px; margin-bottom: 20px; height: 100%">
@@ -15,7 +15,7 @@
             </div>
         </div>
     </div>
-    <div class="ph-text" style="max-width: 600px">
+    <div class="ph-text">
         Проекти
         <div class="search-bar">
             <input id="search-input" type="text" placeholder="Пошук..." style="border: 1px solid #ccc; border-radius: 4px; padding: 8px 12px; margin-bottom: 50px; margin-top: 20px; font-size: 16px;">
@@ -23,10 +23,35 @@
         <div class="project-button">
             <button type="button">Створити проект</button>
         </div>
-        <p-tabMenu [model]="items" [activeItem]="activeItem" class="full-width-tabmenu-wide">
-            <ng-template pTemplate="item" let-item>
-              {{ item.label }}
-            </ng-template>
-        </p-tabMenu>
+        <table class="project-table" style="width: 98%;">
+            <thead>
+                <tr>
+                    <th>Назва проекту</th>
+                    <th>Опис</th>
+                    <th>Строки реалізації проекту</th>
+                    <th>Керівник</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Проект 1</td>
+                    <td>Опис проекту 1</td>
+                    <td>Строки 1</td>
+                    <td>Керівник 1</td>
+                </tr>
+                <tr>
+                    <td>Проект 2</td>
+                    <td>Опис проекту 2</td>
+                    <td>Строки 2</td>
+                    <td>Керівник 2</td>
+                </tr>
+                <tr>
+                    <td>Проект 3</td>
+                    <td>Опис проекту 3</td>
+                    <td>Строки 3</td>
+                    <td>Керівник 3</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>

@@ -1,0 +1,28 @@
+<div class="ph-capabilities">
+    <div class="container">
+        <div class="ph-capabilities__title">
+            <h1 class="title">Можливості</h1>
+            <p class="subtitle">Ознайомтесь з можливостями, які надає Вам наш продукт</p>
+        </div>
+        <div class="capabilities-container">
+            <div *ngFor = "let item of items" class="capability">
+                <div class="capability__decor" [style.background]="item.color">
+                </div>
+
+                <div class="capability__text">
+                    <div class="capability__title">
+                        {{item.title}}
+                    </div>
+                    <div class="capability__content">
+                        {{item.text}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div [routerLink]="['/new']" class="back-arrow">
+            <a>
+                ← Повернутися на головну
+            </a>
+        </div>
+    </div>
+</div>
