@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {ButtonModule} from "primeng/button";
@@ -9,16 +8,13 @@ import {SidebarModule} from "primeng/sidebar";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {TooltipModule} from "primeng/tooltip";
 import { StartLayoutComponent } from './main-v1/components/start-layout/start-layout.component';
-import { PricingComponent } from './main-v1/components/infopages/pricing/pricing.component';
-import { CapabilitiesComponent } from './main-v1/components/infopages/capabilities/capabilities.component';
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     StartLayoutComponent,
-    PricingComponent,
-    CapabilitiesComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,7 +22,8 @@ import { CapabilitiesComponent } from './main-v1/components/infopages/capabiliti
     AppRoutingModule,
     ButtonModule,
     SidebarModule,
-    TooltipModule
+    HttpClientModule,
+    TooltipModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -12,14 +12,13 @@ export class ProjectPageComponent implements OnInit, AfterViewInit {
 
   @ViewChild('headerTemplate') headerTemplate!: TemplateRef<any>;
 
-  constructor(private uiPart: UiPartService) {}
+  constructor(public uiPart: UiPartService) {}
 
   ngOnInit(): void {
     this.uiPart.showMainNavbar.next(false);
   }
 
   ngAfterViewInit(): void {
-    this.uiPart.headerTemplate = this.headerTemplate;
   }
 }
 

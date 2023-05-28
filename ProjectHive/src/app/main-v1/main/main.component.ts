@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component, OnInit, TemplateRef, ViewChild} from '@angular/core';
 import {UiPartService} from "../services/uiParts.service";
 
 @Component({
@@ -7,6 +7,8 @@ import {UiPartService} from "../services/uiParts.service";
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit, AfterViewInit{
+  @ViewChild('headerTemplate') headerTemplate!: TemplateRef<any>;
+
   isVisibleNav = true;
 
   constructor(
@@ -21,5 +23,6 @@ export class MainComponent implements OnInit, AfterViewInit{
   }
 
   ngAfterViewInit(): void {
+    this.uiParts.headerTemplate = this.headerTemplate;
   }
 }

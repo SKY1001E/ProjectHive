@@ -3,19 +3,24 @@ import {ButtonModule} from "primeng/button";
 import {NgTemplateOutlet} from "@angular/common";
 import {ProjectPageComponent} from "./projectpage/projectpage.component";
 import {RouterModule} from "@angular/router";
-import {LoginComponent} from "../auth/login/login.component";
-import {RegistrationComponent} from "../auth/registration/registration.component";
+import {CreateProjectComponent} from "./create-project/create-project.component";
 
 @NgModule({
   imports: [
     RouterModule.forChild([
-      {path: '', component: ProjectPageComponent},
+      {path: '', redirectTo: 'projects', pathMatch: 'full'},
+      {path: 'projects', component: ProjectPageComponent},
+      {path: 'create', component: CreateProjectComponent}
     ]),
     NgTemplateOutlet,
     ButtonModule
   ],
-  declarations: [
+  exports: [
     ProjectPageComponent
+  ],
+  declarations: [
+    ProjectPageComponent,
+    CreateProjectComponent
   ]
 })
 

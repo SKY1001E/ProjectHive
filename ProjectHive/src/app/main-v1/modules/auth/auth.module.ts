@@ -4,25 +4,26 @@ import {RegistrationComponent} from "./registration/registration.component";
 import {RouterModule} from "@angular/router";
 import {ButtonModule} from "primeng/button";
 import {NgTemplateOutlet} from "@angular/common";
+import {ProjectPageModule} from "../projects/projects.module";
 
 @NgModule({
   declarations: [
     LoginComponent,
     RegistrationComponent,
   ],
-    imports: [
-        RouterModule.forChild([
-            {path: '', redirectTo: 'in', pathMatch: 'full'},
-            {
-                path: 'in', component: LoginComponent,
-            },
-            {
-                path: 'up', component: RegistrationComponent,
-            }
-        ]),
-        ButtonModule,
-        NgTemplateOutlet,
-    ],
+  imports: [
+    RouterModule.forChild([
+      {path: '', redirectTo: 'in', pathMatch: 'full'},
+      {
+        path: 'in', component: LoginComponent,
+      },
+      {
+        path: 'up', component: RegistrationComponent,
+      }
+    ]),
+    ButtonModule,
+    NgTemplateOutlet,
+  ],
   providers: [],
   bootstrap: []
 })

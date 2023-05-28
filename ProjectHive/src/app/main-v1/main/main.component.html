@@ -17,14 +17,36 @@
       <img src="/assets/logo.png" alt="logo" style="max-height: 45px; height: 100%">
     </div>
     <div style="flex-grow: 1; display: flex; justify-content: center">
-      <p-button label="Почати роботу" [routerLink]="['/project-page']"styleClass="p-button-secondary p-button-text"></p-button>
-      <p-button [style]="{marginLeft: '20px'}" [routerLink]="['/prices']" label="Ціни" styleClass="p-button-secondary p-button-text"></p-button>
-      <p-button [style]="{marginLeft: '20px'}" [routerLink]="['/capabilities']" label="Можливості" styleClass="p-button-secondary p-button-text"></p-button>
+      <p-button label="Почати роботу" [routerLink]="['/project-page']" styleClass="p-button-secondary p-button-text"></p-button>
+      <p-button [style]="{marginLeft: '20px'}" [routerLink]="['/info', 'prices']" label="Ціни" styleClass="p-button-secondary p-button-text"></p-button>
+      <p-button [style]="{marginLeft: '20px'}" [routerLink]="['/info', 'capabilities']" label="Можливості" styleClass="p-button-secondary p-button-text"></p-button>
     </div>
     <div [pTooltip]="'Увійти в аккаунт'"
          [tooltipPosition]="'left'"
          class="auth-logo" style="margin-right: 25px">
       <p-button icon="pi pi-user" [routerLink]="['/sign']" styleClass="p-button-rounded p-button-info p-button-outlined"></p-button>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #headerTemplate>
+  <div class="header ph-header" style="box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);">
+    <div style="display: flex; align-items: center; justify-content: space-between; margin: 25px 0 10px 50px">
+      <div class="ph-logo" style="margin-top: -5px;">
+        <img src="/assets/logo.png" alt="logo" style="max-height: 40px; margin-bottom: 20px; height: 100%">
+      </div>
+      <div style="display: flex; align-items: center; flex-grow: 1; justify-content: center;">
+        <p-button [style]="{marginLeft: '20px', marginBottom:'18px'}" label="Проекти" styleClass="p-button-secondary p-button-text"></p-button>
+        <p-button [style]="{marginLeft: '20px', marginBottom:'18px'}" label="Календар" styleClass="p-button-secondary p-button-text"></p-button>
+      </div>
+      <div>
+        <p-button icon="pi pi-bell" styleClass="p-button-rounded p-button-warning p-button-outlined" [style]="{marginRight: '10px',  marginBottom:'18px'}"></p-button>
+        <p-button icon="pi pi-question" styleClass="p-button-rounded p-button-warning p-button-outlined" [style]="{marginRight: '10px',  marginBottom:'18px'}"></p-button>
+        <p-button icon="pi pi-user" styleClass="p-button-rounded p-button-warning p-button-outlined"
+                  [pTooltip]="'Профиль'"
+                  [tooltipPosition]="'bottom'"
+                  [routerLink]="['/profile']" [style]="{marginRight: '20px', marginBottom:'18px'}"></p-button>
+      </div>
     </div>
   </div>
 </ng-template>
