@@ -1,0 +1,70 @@
+<div class="ph-project-page">
+    <div>
+      <ng-container *ngTemplateOutlet="uiPart.headerTemplate"></ng-container>
+    </div>
+    <div class="ph-project-page__inner">
+        <aside class="sidebar">
+            <div class="project-info">
+                <div class="project-info__logo">
+                    <img class="project-info__logo-img" src="assets/bulb.jpg" alt="logo">
+                </div>
+                <div class="project-info__text">
+                    <div class="project-info__title">
+                        Project title
+                    </div>
+                    <div class="project-info__description">
+                        description
+                    </div>
+                </div>
+
+            </div>
+            <div class="side-menu">
+                <button class="side-menu__button side-menu__button_active">Головна</button>
+                <button class="side-menu__button side-menu__button_inactive">Дошки</button>
+                <button class="side-menu__button side-menu__button_inactive">Учасники</button>
+                <button class="side-menu__button side-menu__button_inactive">Налаштування</button>
+            </div>
+        </aside>
+        <div class="content">
+            <div class="bread-crumbs">
+                Проекти / Smart Farm / Головна
+            </div>
+            <div class="content__inner">
+                <div class="project-head">
+                    <div class="project-head__leader">
+                        <div class="leader__img-container">
+                            <img class="leader__img" src="assets/bulb.jpg" alt="acc">
+                        </div>
+                        <div class="leader__text">
+                            <div class="leader__name">
+                                Name Surname
+                            </div>
+                            <div class="leader__role">
+                                адміністратор
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-head__main-info">
+                        <div class="project-head__title">
+                            Project title
+                        </div>
+                        <div class="project-head__description">
+                            description
+                        </div>
+                    </div>
+                    <div class="project-head__dates">
+                        <div class="project-head__start-date">
+                            Дата початку: ******
+                        </div>
+                        <div class="project-head__end-date">
+                            Дата закінчення: ******
+                        </div>
+                    </div>
+                </div>
+                <div class="info">
+                    Для початку роботи оберіть пункт в меню зліва
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
