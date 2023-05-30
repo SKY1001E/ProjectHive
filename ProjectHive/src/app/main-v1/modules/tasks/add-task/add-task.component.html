@@ -1,0 +1,94 @@
+<div class="ph-add-task-page">
+    <div>
+      <ng-container *ngTemplateOutlet="uiPart.headerTemplate"></ng-container>
+    </div>
+    <div class="ph-project-page__inner">
+        <div class="bread-crumbs">
+            Проекти / Smart Farm / Завдання / Додавання Завдання
+        </div>
+        <div class="add-task-form-container">
+            <form class="add-task-form" method="post">
+                <div class="add-task-form__inner">
+                    <div class="add-task-form__main">
+                        <div class="add-task-form__task-name">
+                            <label class="add-task-form__label" for = "name">Назва завдання</label>
+                            <input id = "name" type="text">
+                        </div>
+
+                        <div class="add-task-form__additional-info">
+                            <div class="add-task-form__task-marks">
+                                <label for = "mark">Маркування задачі</label>
+                                <select id = "mark" name="mark">
+                                    <!--<value></value>-->
+                                </select>
+                            </div>
+
+                            <div class="add-task-form__task-terms">
+                                <label for = "date">Сроки</label>
+                                <input type ="date" name="date" id = "date">
+                            </div>
+
+                            <div class="add-task-form__status">
+                                <label for = "stats">Статус</label>
+                                <select id = "mark">
+                                    <!--<value></value>-->
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <div class="add-task-form__task-description">
+                            <label class="add-task-form__label" for = "description">Опис завдання</label>
+                            <textarea name="description"></textarea>
+                        </div>
+
+                        <div class="add-task-form__attachments">
+                            <label class="add-task-form__label">Вкладення</label>
+                            <button type="add-attachment"></button>
+                        </div>
+
+                    </div>
+                    <div class="add-task-form__side">
+                        <div class="add-task-form__data">
+                            <div class="data__author">
+                                <div class="author__text">
+                                    Автор
+                                </div>
+                            </div>
+                            <div class="author">
+                                <div class="author__img-container">
+                                    <img class="author__img" alt="acc" src="assets/bulb.jpg">
+                                </div>
+                                <div class="author__name">
+                                    Василь Васильович
+                                </div>
+                            </div>
+                            <div class="add-executor">
+                                <form action="" class="add-executor-form">
+                                    <input type="email" name="email">
+                                    <input type="submit" value="Назначити">
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="add-task-form__subtasks">
+                            <div class="subtasks">
+                                <div class="subtasks__complement"></div>
+                                <div class="subtasks_list">
+                                    <!-- -->
+                                </div>
+                            </div>
+
+                            <button class="edit-subtasks"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="add-task-form__submit-button">
+                    <input type="submit" value="Додати завдання">
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
