@@ -4,13 +4,15 @@ import {NgTemplateOutlet} from "@angular/common";
 import {ProjectPageComponent} from "./projectpage/projectpage.component";
 import {RouterModule} from "@angular/router";
 import {CreateProjectComponent} from "./create-project/create-project.component";
+import { ProjectMainComponent } from './project-main/project-main.component';
 
 @NgModule({
   imports: [
     RouterModule.forChild([
       {path: '', redirectTo: 'projects', pathMatch: 'full'},
       {path: 'projects', component: ProjectPageComponent},
-      {path: 'create', component: CreateProjectComponent}
+      {path: 'create', component: CreateProjectComponent},
+      {path: 'project-main', component: ProjectMainComponent}
     ]),
     NgTemplateOutlet,
     ButtonModule
@@ -20,7 +22,8 @@ import {CreateProjectComponent} from "./create-project/create-project.component"
   ],
   declarations: [
     ProjectPageComponent,
-    CreateProjectComponent
+    CreateProjectComponent,
+    ProjectMainComponent
   ]
 })
 

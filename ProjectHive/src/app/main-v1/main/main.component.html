@@ -32,11 +32,11 @@
 <ng-template #headerTemplate>
   <div class="header ph-header" style="box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);">
     <div style="display: flex; align-items: center; justify-content: space-between; margin: 25px 0 10px 50px">
-      <div class="ph-logo" style="margin-top: -5px;">
+      <div class="ph-logo" [routerLink]="['/new']" style="margin-top: -5px;">
         <img src="/assets/logo.png" alt="logo" style="max-height: 40px; margin-bottom: 20px; height: 100%">
       </div>
       <div style="display: flex; align-items: center; flex-grow: 1; justify-content: center;">
-        <p-button [style]="{marginLeft: '20px', marginBottom:'18px'}" label="Проекти" styleClass="p-button-secondary p-button-text"></p-button>
+        <p-button [routerLink]="['/project-page']" [style]="{marginLeft: '20px', marginBottom:'18px'}" label="Проекти" styleClass="p-button-secondary p-button-text"></p-button>
         <p-button [style]="{marginLeft: '20px', marginBottom:'18px'}" label="Календар" styleClass="p-button-secondary p-button-text"></p-button>
       </div>
       <div>
