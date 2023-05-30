@@ -2,5 +2,37 @@
   <div>
     <ng-container *ngTemplateOutlet="uiParts.headerTemplate"></ng-container>
   </div>
-  <h1>PROFILE</h1>
+  <h1>Твій профіль</h1>
+
+  <div class="cover-photo-container">
+    <div class="cover-photo default-cover">
+      <div class="profile-photo"></div> <!-- Місце для фотографії -->
+    </div>
+  </div>
+
+  <div class="profile-grid">
+    <div class="user-info">
+      <h2>Детальна інформація</h2>
+      <p>Nickname: There can be your nickname</p>
+      <p>E-mail: something@gmail.com</p>
+      <p>Ім'я: Алекс</p>
+      <p>Прізвище: Горний</p>
+      <p>Посада: Адмін/менеджер/користувач</p>
+    </div>
+
+    <div class="vl"></div>
+
+    <div class="settings-buttons">
+      <h2>Налаштування</h2>
+      <button class="button orange">Змінити фото профіля</button>
+      <button class="button orange">Змінити обкладинку</button>
+      <div class="password-fields">
+        <h2>Зміна паролю</h2>
+        <input type="password" placeholder="Старий пароль">
+        <input type="password" placeholder="Новий пароль">
+        <input type="password" placeholder="Підтвердження паролю">
+        <button class="button">Підтвердити зміну</button>
+      </div>
+    </div>
+  </div>
 </div>
