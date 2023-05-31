@@ -1,0 +1,269 @@
+.bread-crumbs {
+    color: #727272;
+    font-size: 16px;
+    font-family: 'Overpass', sans-serif;
+    margin-top: 30px;
+    margin-left: 70px;
+}
+.create-project_background{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 97vh;
+    background-color: #FFFEEE;
+    position: relative;
+    margin: 3% 30% 5% 30%;
+    padding: 20%;
+    border-radius: 10px;
+}
+.top-nav{
+    position: absolute;
+    top: 3%;
+    left: 5%;
+}
+.arrow-hover {
+    cursor: pointer;
+    position: relative;
+    width: 15px;
+    height: 12px;
+}
+.arrow-hover div {
+    position: relative;
+    top: 11px;
+    width: 35px;
+    height: 5px;
+    background-color: #000000;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+    left:0;
+    display: block;
+}
+.arrow-hover div::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 5px;
+    top: -6px;
+    left: -7px; 
+    background-color: #000000;
+    transform: rotate(-45deg); 
+}
+.arrow-hover div::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 5px;
+    top: 6px;
+    left: -8px; 
+    background-color: #000000;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+    transform: rotate(45deg); 
+}
+.arrow-hover:hover {
+    animation: arrow-hover 1s linear infinite;
+}
+@keyframes arrow-hover {
+    0% {
+        left:0;
+    }
+    50% {
+        left:10px;
+    }
+    100% {
+        left:0;
+    }
+}
+.create-label {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: #000;
+    font-family: 'Overpass', sans-serif;
+}
+.project-photo-container{
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; 
+}
+.project-photo{
+    display: inline-block; 
+    vertical-align: middle; 
+    margin-right: 10px; 
+    width: 100px; 
+    height: 100px;
+}
+.add-photo-button {
+    position: absolute;
+    top: 31%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.add-photo-button button:active {
+    background-color: #F59E0B; 
+    transform: scale(0.95); 
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2); 
+  }
+  
+.add-photo-button button {
+    padding: 12px 20px; 
+    font-size: 16px;
+    background-color: #FAA90C;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 8px; 
+}
+.title-input {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+    padding: 10px;
+}
+.title-input input::placeholder {
+    color: rgba(0, 0, 0, 0.2); 
+}
+.title-label {
+    position: absolute;
+    bottom: 85%;
+    left: 18%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    color: #000;
+    font-family: 'Overpass', sans-serif;
+
+}
+.title-input input {
+    width: 400px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid rgb(182, 182, 182);
+    outline: none; 
+    background-color: rgb(255, 255, 255); 
+}
+
+.description-input {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);   
+    padding: 10px;
+}
+.description-input input::placeholder {
+    color: rgba(0, 0, 0, 0.2); 
+}
+.description-label {
+    position: absolute;
+    bottom: 85%;
+    left: 18%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    color: #000;
+    font-family: 'Overpass', sans-serif;
+
+}
+.description-input input {
+    width: 400px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid rgb(182, 182, 182);
+    outline: none; 
+    background-color: rgb(255, 255, 255); 
+}
+.terms-input {
+    width: 350px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+}
+.terms-label {
+    position: absolute;
+    bottom: 95%;
+    left: 18%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    color: #000;
+    font-family: 'Overpass', sans-serif;
+}
+.timeframe{
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #000;
+    font-family: 'Overpass', sans-serif;
+}
+.start-date {
+    float: left;
+    margin-right: 50px;
+}
+.end-date {
+    float: right;
+}
+.end-date input, .start-date input {
+    width: 140px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    outline: none; 
+    background-color:  #f59f0b81; 
+    border-color: #f59f0b81;
+}
+.manager-input {
+    position: absolute;
+    top: 84%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    padding: 10px;
+}
+.manager-input input::placeholder {
+    color: rgba(0, 0, 0, 0.2); 
+}
+.manager-label {
+    position: absolute;
+    bottom: 85%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    color: #000;
+    font-family: 'Overpass', sans-serif;
+
+}
+.manager-input input {
+    width: 400px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid rgb(182, 182, 182);
+    outline: none; 
+    background-color: rgb(255, 255, 255); 
+}
+.create-button {
+    position: absolute;
+    top: 93%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.create-button button:active {
+    background-color: #F59E0B; 
+    transform: scale(0.95); 
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2); 
+  }
+  
+.create-button button {
+    padding: 15px 45px; 
+    font-size: 16px;
+    background-color: #FAA90C;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); 
+    border-radius: 8px; 
+}

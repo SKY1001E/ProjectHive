@@ -2,5 +2,60 @@
   <div>
     <ng-container *ngTemplateOutlet="uiParts.headerTemplate"></ng-container>
   </div>
-  <h1>CREATE PROJ</h1>
+  
+  <div class="bread-crumbs">
+    Проекти / Новий проект
+  </div>
+
+  <div class="create-project_background">
+    <div class="top-nav">
+      <div class="arrow-hover">
+        <div></div>
+      </div>
+    </div>
+      
+    <div class="create-label" style="margin-bottom: 10px;">
+       Створення проекту
+    </div>
+   
+    <div class="project-photo-container">
+        <img src="/assets/picture.png" alt="Project photo" class="project-photo">
+    </div>
+
+    <div class="add-photo-button">
+        <button type="button">Додати зображення</button>
+    </div>
+
+    <div class="title-input">
+      <label for="title" class="title-label">Назва проекту</label>
+      <input type="text" id="title" placeholder="Enter here">
+    </div>
+
+    <div class="description-input">
+        <label for="description" class="description-label">Опис проекту</label>
+        <input type="text" id="description" placeholder="Enter here">
+    </div>
+
+    <div class="terms-input">
+      <label for="terms" class="terms-label">Строки виконання</label>
+      <div class="start-date">
+        <label for="terms" class="timeframe">Дата початку</label>
+        <input type="date" id="terms" name="startdate"/>
+      </div>
+      <div class="end-date">
+        <label for="terms" class="timeframe">Дата завершення</label>
+        <input type="date" id="terms" name="enddate"/>
+      </div>
+    </div>
+
+    <div class="manager-input">
+      <label for="manager" class="manager-label">Керівник</label>
+      <input type="email" id="email" placeholder="Enter email">
+    </div>
+
+    <div class="create-button">
+      <button type="button">Створити проект</button>
+    </div>
+  </div>
 </div>
+
