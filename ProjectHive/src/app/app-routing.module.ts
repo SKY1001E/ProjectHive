@@ -7,6 +7,7 @@ import {ProjectPageComponent} from "./main-v1/modules/projects/projectpage/proje
 import {StartLayoutComponent} from "./main-v1/components/start-layout/start-layout.component";
 import {PricingComponent} from "./main-v1/modules/infopages/pricing/pricing.component";
 import {CapabilitiesComponent} from "./main-v1/modules/infopages/capabilities/capabilities.component";
+import { AddMemberComponent } from './main-v1/modules/members/add-members/add-members.component';
 
 const routes: Routes = [
   {path: '', component: MainComponent,
@@ -30,10 +31,15 @@ const routes: Routes = [
       {
         path: 'tasks',
         loadChildren: () => import('../app/main-v1/modules/tasks/tasks.module').then(m => m.TasksModule)
-      }
+      },
+      {
+        path: 'members',
+        loadChildren: () => import('../app/main-v1/modules/members/members.module').then(m => m.MembersModule)
+      },
+      
     ]
   }
-];
+]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
