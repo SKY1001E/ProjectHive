@@ -3,92 +3,114 @@
       <ng-container *ngTemplateOutlet="uiPart.headerTemplate"></ng-container>
     </div>
     <div class="ph-project-page__inner">
-        <div class="bread-crumbs">
-            Проекти / Smart Farm / Завдання / Додавання Завдання
-        </div>
-        <div class="add-task-form-container">
-            <form class="add-task-form" method="post">
-                <div class="add-task-form__inner">
-                    <div class="add-task-form__main">
-                        <div class="add-task-form__task-name">
-                            <label class="add-task-form__label" for = "name">Назва завдання</label>
-                            <input id = "name" type="text">
-                        </div>
-
-                        <div class="add-task-form__additional-info">
-                            <div class="add-task-form__task-marks">
-                                <label for = "mark">Маркування задачі</label>
-                                <select id = "mark" name="mark">
-                                    <!--<value></value>-->
-                                </select>
+        <div class="container">
+            <div class="bread-crumbs">
+                Проекти / Smart Farm / Завдання / Додавання Завдання
+            </div>
+            <div class="arrow">
+                <p-button icon="pi pi-arrow-left" styleClass="p-button-rounded p-button-secondary p-button-text"></p-button>
+            </div>
+            <div class="add-task-form-container">
+                <form class="add-task-form" method="post">
+                    <div class="add-task-form__inner">
+                        <div class="add-task-form__main">
+                            <div class="add-task-form__task-name">
+                                <label class="add-task-form__label section-name" for = "name">Назва завдання</label>
+                                <input class="add-task-form__name-input" id = "name" type="text">
                             </div>
-
-                            <div class="add-task-form__task-terms">
-                                <label for = "date">Сроки</label>
-                                <input type ="date" name="date" id = "date">
+    
+                            <div class="add-task-form__additional-info">
+                                <div class="add-task-form__task-marks add-task-form__additional-input">
+                                    <label class="add-task-form__additional-input-label" for = "mark">Маркування задачі</label>
+                                    <select class="add-task-form__select-input" id = "mark" name="mark">
+                                        <option value="Burning">Normal</option>
+                                        <option value="Burning">Burning</option>
+                                        <option value="Burning">Optional</option>
+                                    </select>
+                                </div>
+    
+                                <div class="add-task-form__task-terms add-task-form__additional-input">
+                                    <label class="add-task-form__additional-input-label" for = "date">Сроки</label>
+                                    <input class="add-task-form__select-input" type ="date" name="date" id = "date">
+                                </div>
+    
+                                <div class="add-task-form__status add-task-form__additional-input">
+                                    <label class="add-task-form__additional-input-label" for = "stats">Пріоритет</label>
+                                    <select class="add-task-form__select-input" id = "mark">
+                                        <option value="3">Підвищений</option>
+                                        <option value="2">Звичайний</option>
+                                        <option value="1">Понижений</option>
+                                    </select>
+                                </div>
+    
                             </div>
-
-                            <div class="add-task-form__status">
-                                <label for = "stats">Статус</label>
-                                <select id = "mark">
-                                    <!--<value></value>-->
-                                </select>
+    
+                            <div class="add-task-form__task-description">
+                                <label class="add-task-form__label section-name" for = "description">Опис завдання</label>
+                                <textarea name="description" class="add-task-form__textarea"></textarea>
                             </div>
-
+    
+                            <div class="add-task-form__attachments">
+                                <p class="add-task-form__label section-name">Вкладення</p>
+                                <div class="add-task-form__attachments-container">
+                                    <div class="attachment">
+                                        <p>Постановка завдання.pdf</p>
+                                    </div>
+                                </div>
+                                <div style="margin-top: 15px">
+                                    <p-button class="add-attachment-button" styleClass="p-button-warning">Додати вкладення</p-button>
+                                </div>
+                            </div>
+    
                         </div>
-
-                        <div class="add-task-form__task-description">
-                            <label class="add-task-form__label" for = "description">Опис завдання</label>
-                            <textarea name="description"></textarea>
+                        <div class="add-task-form__side">
+                            <div class="add-task-form__data">
+                                Відомості
+                                <div class="author">
+                                    <div class="author__text">
+                                        Автор
+                                    </div>
+                                    <div class="author__name">
+                                        Василь Васильович
+                                    </div>
+                                </div>
+                            
+                                <div class="executor">
+                                    <div class="author__text">
+                                        Виконавець
+                                    </div>
+                                    <div class="author__name">
+                                        Не назначено
+                                    </div>
+                                </div>
+                                
+                                <div class="add-executor">
+                                    <form action="" class="add-executor-form">
+                                        <input class="add-executor-form__email-input" type="email" placeholder="email@mail.com" name="email">
+                                        <input class="add-executor__submit-button" type="submit" value="Назначити">
+                                    </form>
+                                </div>
+                            </div>
+    
+                            <div class="add-task-form__subtasks">
+                                <div class="subtasks">
+                                    <div class="subtasks__complement"></div>
+                                    <div class="subtasks_list">
+                                        <!-- -->
+                                    </div>
+                                </div>
+    
+                                <button class="edit-subtasks"></button>
+                            </div>
                         </div>
-
-                        <div class="add-task-form__attachments">
-                            <label class="add-task-form__label">Вкладення</label>
-                            <button type="add-attachment"></button>
-                        </div>
-
                     </div>
-                    <div class="add-task-form__side">
-                        <div class="add-task-form__data">
-                            <div class="data__author">
-                                <div class="author__text">
-                                    Автор
-                                </div>
-                            </div>
-                            <div class="author">
-                                <div class="author__img-container">
-                                    <img class="author__img" alt="acc" src="assets/bulb.jpg">
-                                </div>
-                                <div class="author__name">
-                                    Василь Васильович
-                                </div>
-                            </div>
-                            <div class="add-executor">
-                                <form action="" class="add-executor-form">
-                                    <input type="email" name="email">
-                                    <input type="submit" value="Назначити">
-                                </form>
-                            </div>
-                        </div>
-
-                        <div class="add-task-form__subtasks">
-                            <div class="subtasks">
-                                <div class="subtasks__complement"></div>
-                                <div class="subtasks_list">
-                                    <!-- -->
-                                </div>
-                            </div>
-
-                            <button class="edit-subtasks"></button>
-                        </div>
+    
+                    <div class="add-task-form__submit-button-container">
+                        <input class = "add-task-form__submit-button" type="submit" value="Додати завдання">
                     </div>
-                </div>
-
-                <div class="add-task-form__submit-button">
-                    <input type="submit" value="Додати завдання">
-                </div>
-
-            </form>
+    
+                </form>
+            </div>
         </div>
     </div>
 </div>
