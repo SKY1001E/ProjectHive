@@ -5,6 +5,7 @@ import {ProjectPageComponent} from "./projectpage/projectpage.component";
 import {RouterModule} from "@angular/router";
 import {CreateProjectComponent} from "./create-project/create-project.component";
 import { ProjectMainComponent } from './project-main/project-main.component';
+import { BoardsComponent } from './boards/boards.component';
 
 @NgModule({
   imports: [
@@ -12,7 +13,8 @@ import { ProjectMainComponent } from './project-main/project-main.component';
       {path: '', redirectTo: 'projects', pathMatch: 'full'},
       {path: 'projects', component: ProjectPageComponent},
       {path: 'create', component: CreateProjectComponent},
-      {path: 'project-main', component: ProjectMainComponent}
+      {path: 'project-main', component: ProjectMainComponent},
+      {path: 'boards', component: BoardsComponent}
     ]),
     NgTemplateOutlet,
     ButtonModule
@@ -23,7 +25,8 @@ import { ProjectMainComponent } from './project-main/project-main.component';
   declarations: [
     ProjectPageComponent,
     CreateProjectComponent,
-    ProjectMainComponent
+    ProjectMainComponent,
+    BoardsComponent
   ]
 })
 

@@ -1,0 +1,203 @@
+
+.ph-project-page__inner {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    padding: 30px 15px;
+}
+
+.project-info__title {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.project-info__description {
+    font-size: 16px;
+}
+
+.project-info__logo {
+    width: 50px;
+    height: 50px;
+}
+
+.project-info__logo-img {
+    width: 100%;
+    height: 100%;
+}
+
+.project-info {
+    display: flex;
+    justify-content: center;
+}
+
+.sidebar {
+    border-right: 1px solid #959595;
+    height: 80vh;
+}
+
+@media (min-height: 800px) {
+    .sidebar {
+        height: 95vh;
+    }
+}
+
+.side-menu {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    align-items: center;
+}
+
+.side-menu__button {
+    width: 70%;
+    border-radius: 15px;
+    padding: 10px 0px;
+    font-size: 20px;
+    background-color: rgba(0,0,0,0);
+    height: 60px;
+    margin: 2px;
+    border: 0;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.side-menu__button_inactive:hover {
+    background-color: rgb(218, 218, 218);
+}
+
+.side-menu__button_active {
+    background-color: #FFF1A5;
+    color: #625800;
+    font-weight: 600;
+}
+
+.bread-crumbs {
+    color: #727272;
+    font-size: 20px;
+}
+
+.content {
+    padding: 0 60px;
+}
+
+
+.content__inner {
+    padding: 60px 0;
+}
+
+
+
+// INNER
+
+
+// BOARD HEAD
+
+.boards {
+    display: flex;
+    gap: 18px;
+
+    .board {
+        height: 75vh;
+        
+        .board__inner {
+
+            height: 100%;
+
+            .head {
+                background-color: #F0F0EF;
+                border-radius: 7px;
+                font-size: 30px;
+                font-weight: 600;
+                padding: 10px 30px;
+            }
+
+            .head_complete {
+                border-bottom: 5px solid #ff4e2f;
+            }
+
+            .head_in-progress {
+                border-bottom: 5px solid #ffee52;
+            }
+
+            .head_completed {
+                border-bottom: 5px solid #66ff66;
+            }
+
+            .tasks {
+                height: 100%;
+                margin-top: 15px;
+                background-color: #FDE7BB;
+                border-radius: 7px;
+                display: flex;
+                flex-direction: column;
+                padding: 20px;
+                gap: 20px;
+
+
+                .task {
+                
+                    transition: all 0.3s;
+                    background-color: white;
+                    padding: 15px;
+                    box-shadow: 1px 1px 10px rgba(0,0,0,0.1);
+                    border-radius: 7px;
+                    
+                    .info {
+                        display: flex;
+                        justify-content: space-between;
+
+
+                        .main-info {
+
+                            display: flex;
+                            gap: 5px;
+                            align-items: center;
+
+
+                            .img-container {
+                                padding: 8px;
+                                border-radius: 5px;
+                                width: 36px;
+                                height: 36px;
+                                background-color: rgb(231, 231, 231);
+                                img {
+                                    height: 100%;
+                                    width: 100%;
+                                }
+                            }
+
+                            .name {
+                                font-size: 22px;
+                            }
+                        }
+
+                        .executor {
+                            font-size: 14px;
+                            padding: 5px;
+                        }
+                    }
+
+                    .tags {
+                        margin-top: 15px;
+                        display: flex;
+                        gap: 5px;
+                        .tag {
+                            border: 1px solid rgb(161, 161, 161);
+                            padding: 2px 5px;
+                            border-radius: 10px;
+                            font-size: 14px;
+                            color:#2c2c2c;
+                        }
+                    }
+                }
+
+                .task:hover {
+                    box-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+                    cursor: pointer;
+                }
+            }
+        }
+
+
+    }
+}
+
