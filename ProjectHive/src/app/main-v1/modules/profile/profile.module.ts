@@ -20,4 +20,4 @@ import { ProfilePageComponent } from './profile-page/profile-page.component';
   ]
 })
 
-export class ProjectPageModule {}
+export class ProfileModule {}

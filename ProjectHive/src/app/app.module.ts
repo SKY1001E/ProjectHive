@@ -9,6 +9,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {TooltipModule} from "primeng/tooltip";
 import { StartLayoutComponent } from './main-v1/components/start-layout/start-layout.component';
 import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {AuthGuard} from "./main-v1/guards/auth.guard";
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
     HttpClientModule,
     TooltipModule,
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
