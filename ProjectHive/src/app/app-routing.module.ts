@@ -8,6 +8,7 @@ import {StartLayoutComponent} from "./main-v1/components/start-layout/start-layo
 import {PricingComponent} from "./main-v1/modules/infopages/pricing/pricing.component";
 import {CapabilitiesComponent} from "./main-v1/modules/infopages/capabilities/capabilities.component";
 import { AddMemberComponent } from './main-v1/modules/members/add-members/add-members.component';
+import {AuthGuard} from "./main-v1/guards/auth.guard";
 
 const routes: Routes = [
   {path: '', component: MainComponent,
@@ -18,7 +19,8 @@ const routes: Routes = [
         loadChildren: () => import('../app/main-v1/modules/auth/auth.module').then(m => m.AuthModule)
       },
       {path: 'project-page',
-        loadChildren: () => import('../app/main-v1/modules/projects/projects.module').then(m => m.ProjectPageModule)
+          loadChildren: () => import('../app/main-v1/modules/projects/projects.module').then(m => m.ProjectPageModule),
+          //canActivate: [AuthGuard]
       },
       {
         path: 'info',
@@ -26,17 +28,20 @@ const routes: Routes = [
       },
       {
         path: 'profile',
-        loadChildren: () => import('../app/main-v1/modules/profile/profile.module').then(m => m.ProjectPageModule)
+        loadChildren: () => import('../app/main-v1/modules/profile/profile.module').then(m => m.ProfileModule),
+         // canActivate: [AuthGuard]
       },
       {
         path: 'tasks',
-        loadChildren: () => import('../app/main-v1/modules/tasks/tasks.module').then(m => m.TasksModule)
+        loadChildren: () => import('../app/main-v1/modules/tasks/tasks.module').then(m => m.TasksModule),
+         // canActivate: [AuthGuard]
       },
       {
         path: 'members',
-        loadChildren: () => import('../app/main-v1/modules/members/members.module').then(m => m.MembersModule)
+        loadChildren: () => import('../app/main-v1/modules/members/members.module').then(m => m.MembersModule),
+         // canActivate: [AuthGuard]
       },
-      
+
     ]
   }
 ]
