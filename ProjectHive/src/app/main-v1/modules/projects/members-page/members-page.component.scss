@@ -1,0 +1,176 @@
+.ph-project-page__inner {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  padding: 30px 15px;
+}
+
+.project-info__title {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.project-info__description {
+  font-size: 16px;
+}
+
+.project-info__logo {
+  width: 50px;
+  height: 50px;
+}
+
+.project-info__logo-img {
+  width: 100%;
+  height: 100%;
+}
+
+.project-info {
+  display: flex;
+  justify-content: center;
+}
+
+.sidebar {
+  border-right: 1px solid #959595;
+  height: 80vh;
+}
+
+@media (min-height: 800px) {
+  .sidebar {
+    height: 95vh;
+  }
+}
+
+.side-menu {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  align-items: center;
+}
+
+.side-menu__button {
+  width: 70%;
+  border-radius: 15px;
+  padding: 10px 0px;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0);
+  height: 60px;
+  margin: 2px;
+  border: 0;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.side-menu__button_inactive:hover {
+  background-color: rgb(218, 218, 218);
+}
+
+.side-menu__button_active {
+  background-color: #fff1a5;
+  color: #625800;
+  font-weight: 600;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.left-square,
+.right-square {
+  width: 600px;
+  height: 600px;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(217, 217, 217, 1);
+}
+
+.left-square {
+  margin-right: 20px;
+}
+
+.square-title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  align-self: flex-start;
+}
+
+.participants-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.participant {
+  background-color: rgba(186, 186, 186, 1);
+  display: flex;
+  align-items: center;
+  width: 350px;
+  height: 70px;
+  cursor: pointer;
+  border: 2px solid #000000;
+  border-radius: 5px;
+}
+
+.participant:hover {
+  background-color: rgba(255, 241, 165, 1);
+}
+
+.participant-info {
+  flex-grow: 1;
+}
+
+.participant-nickname {
+  font-weight: bold;
+}
+
+.participant-delete {
+  font-size: 18px;
+  color: red;
+  margin-left: 10px;
+}
+
+.participant-delete:hover {
+  color: darkred;
+}
+.right-square {
+  font-size: 180%;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ph-project-page__inner {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  padding: 30px 15px;
+  position: relative;
+}
+
+.content {
+  position: relative;
+}
+
+.add-participant-button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 20px;
+  width: 200px;
+  height: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: rgba(250, 169, 12, 1);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-participant-button:hover {
+  background-color: #ffd700;
+}
