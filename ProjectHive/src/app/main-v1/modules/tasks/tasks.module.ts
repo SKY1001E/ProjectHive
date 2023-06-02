@@ -14,7 +14,7 @@ import { NgTemplateOutlet } from "@angular/common";
   imports: [
     CommonModule,
     RouterModule.forChild([
-        {path: '', redirectTo: 'tasks', pathMatch: 'full'},
+        {path: '', redirectTo: 'add', pathMatch: 'full'},
         {path: 'add', component: AddTaskComponent},
       ]),
       NgTemplateOutlet,

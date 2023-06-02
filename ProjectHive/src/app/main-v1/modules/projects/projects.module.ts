@@ -6,6 +6,7 @@ import {RouterModule} from "@angular/router";
 import {CreateProjectComponent} from "./create-project/create-project.component";
 import { ProjectMainComponent } from './project-main/project-main.component';
 import { BoardsComponent } from './boards/boards.component';
+import { MembersPageComponent } from './members-page/members-page.component';
 
 @NgModule({
   imports: [
@@ -14,7 +15,8 @@ import { BoardsComponent } from './boards/boards.component';
       {path: 'projects', component: ProjectPageComponent},
       {path: 'create', component: CreateProjectComponent},
       {path: 'project-main', component: ProjectMainComponent},
-      {path: 'boards', component: BoardsComponent}
+      {path: 'boards', component: BoardsComponent},
+      {path: 'members', component: MembersPageComponent}
     ]),
     NgTemplateOutlet,
     ButtonModule
@@ -26,7 +28,8 @@ import { BoardsComponent } from './boards/boards.component';
     ProjectPageComponent,
     CreateProjectComponent,
     ProjectMainComponent,
-    BoardsComponent
+    BoardsComponent,
+    MembersPageComponent
   ]
 })
 

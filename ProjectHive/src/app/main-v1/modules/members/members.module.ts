@@ -11,7 +11,7 @@ import { ButtonModule } from "primeng/button";
   imports: [
     CommonModule,
     RouterModule.forChild([
-      { path: '', redirectTo: 'members', pathMatch: 'full' },
+      { path: '', redirectTo: 'add-members', pathMatch: 'full' },
       { path: 'add-members', component: AddMemberComponent },
     ]),
     ButtonModule
