@@ -1,0 +1,128 @@
+<div class="ph-task-page">
+    <div>
+      <ng-container *ngTemplateOutlet="uiPart.headerTemplate"></ng-container>
+    </div>
+    <div class="ph-project-page__inner">
+        <div class="container">
+            <div class="bread-crumbs">
+                Проекти / Smart Farm / Завдання / ...
+            </div>
+            <div class="arrow">
+                <p-button icon="pi pi-arrow-left" styleClass="p-button-rounded p-button-secondary p-button-text"></p-button>
+            </div>
+            <div class="task-form-container">
+                <div class="task-form">
+                    <div class="task-form__inner">
+                        <div class="task-form__main">
+                            <div class="task-form__task-name">
+                                <label class="task-form__label section-name" for = "name">Назва завдання</label>
+                                <input class="task-form__name-input" id = "name" type="text">
+                            </div>
+    
+                            <div class="task-form__additional-info">
+                                <div class="task-form__task-marks task-form__additional-input">
+                                    <label class="task-form__additional-input-label" for = "mark">Маркування задачі</label>
+                                    <select class="task-form__select-input" id = "mark" name="mark">
+                                        <option value="Normal">Normal</option>
+                                        <option value="Burning">Burning</option>
+                                        <option value="Optional">Optional</option>
+                                    </select>
+                                </div>
+    
+                                <div class="task-form__task-terms task-form__additional-input">
+                                    <label class="task-form__additional-input-label" for = "date">Сроки</label>
+                                    <input class="task-form__select-input" type ="date" name="date" id = "date">
+                                </div>
+    
+                                <div class="task-form__status task-form__additional-input">
+                                    <label class="task-form__additional-input-label" for = "stats">Пріоритет</label>
+                                    <select class="task-form__select-input" id = "mark">
+                                        <option value="3">Підвищений</option>
+                                        <option value="2">Звичайний</option>
+                                        <option value="1">Понижений</option>
+                                    </select>
+                                </div>
+                            </div>
+    
+                            <div class="task-form__task-description">
+                                <label class="task-form__label section-name" for = "description">Опис завдання</label>
+                                <textarea name="description" class="task-form__textarea"></textarea>
+                            </div>
+    
+                            <div class="task-form__attachments">
+                                <p class="task-form__label section-name">Вкладення</p>
+                                <div class="task-form__attachments-container">
+                                    <div class="attachment">
+                                        <p>Постановка завдання.pdf</p>
+                                    </div>
+                                </div>
+                                <div style="margin-top: 15px">
+                                    <p-button class="attachment-button" styleClass="p-button-warning">Додати вкладення</p-button>
+                                </div>
+                            </div>
+    
+                        </div>
+                        <div class="task-form__side">
+                            <div class="task-form__data">
+                                Відомості
+                                <div class="author">
+                                    <div class="author__text">
+                                        Автор
+                                    </div>
+                                    <div class="author__name">
+                                        Василь Васильович
+                                    </div>
+                                </div>
+                            
+                                <div class="executor">
+                                    <div class="author__text">
+                                        Виконавець
+                                    </div>
+                                    <div class="author__name">
+                                        Не назначено
+                                    </div>
+                                </div>
+                                
+                                <div class="add-executor">
+                                    <form action="" class="add-executor-form">
+                                        <input class="add-executor-form__email-input" type="email" placeholder="email@mail.com" name="email">
+                                        <input class="add-executor__submit-button" type="submit" value="Назначити">
+                                    </form>
+                                </div>
+                            </div>
+    
+                            <div class="task-form__subtasks">
+                                <div class="subtasks">
+                                    <div class="subtasks__complement"></div>
+                                    <div class="subtasks_list">
+                                        <!-- -->
+                                    </div>
+                                </div>
+    
+                                <button class="edit-subtasks"></button>
+                            </div>
+
+                            <div class="task-form__status-form-container">
+                                <form class = "status-form" method = "post" action = "/update">
+                                    <div class="status-form__task-status status-form__additional-input">
+                                        <label class="task-form__additional-input-label" for = "status">Статус завдання</label>
+                                        <select class="task-form__select-input" id = "status" name="status">
+                                            <option value="In progress">In progress</option>
+                                            <option value="Completed">Completed</option>
+                                            <option value="To do">To do</option>
+                                        </select>
+                                    </div>
+                                    <input class="status-form__submit-button" value = "Змінити статус" type = "submit">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="task-form__submit-button-container">
+                        <input class = "task-form__submit-button" type="submit" value="Видалити завдання">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

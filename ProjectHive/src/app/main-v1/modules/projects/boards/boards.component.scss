@@ -94,8 +94,10 @@
 .boards {
     display: flex;
     gap: 18px;
+    justify-content: space-between;
 
     .board {
+        flex-grow: 1;
         height: 75vh;
         
         .board__inner {
