@@ -47,7 +47,6 @@ export class RegistrationComponent implements OnInit, AfterViewInit{
     }
 
     registerUser() {
-        console.log('here')
         if(this.form.get('email')?.errors?.['required']) {
             this.messageService.add({severity:'error', summary:'Validate', detail:'Email is required!'});
             return;

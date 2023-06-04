@@ -13,19 +13,19 @@
   <div class="profile-grid">
     <div class="user-info">
       <h2>Детальна інформація</h2>
-      <p>Nickname: There can be your nickname</p>
-      <p>E-mail: something@gmail.com</p>
-      <p>Ім'я: Алекс</p>
-      <p>Прізвище: Горний</p>
-      <p>Посада: Адмін/менеджер/користувач</p>
+      <p>Nickname: {{user?.login}}</p>
+      <p>E-mail: {{user?.email}}</p>
+      <p>Ім'я: {{user?.firstName ? user?.firstName : 'No name'}}</p>
+      <p>Прізвище: {{user?.lastName ? user?.lastName : 'No surname'}}</p>
+      <p>Посада: {{user?.role}}</p>
     </div>
 
     <div class="vl"></div>
 
     <div class="settings-buttons">
       <h2>Налаштування</h2>
+      <button class="button orange" (click)="openUpdateDialog()">Змінити інформацію</button>
       <button class="button orange">Змінити фото профіля</button>
-      <button class="button orange">Змінити обкладинку</button>
       <div class="password-fields">
         <h2>Зміна паролю</h2>
         <input type="password" placeholder="Старий пароль">
@@ -36,3 +36,46 @@
     </div>
   </div>
 </div>
+
+<p-toast></p-toast>
+
+<p-dialog
+    header="Редагування Інформації"
+    [(visible)]="openDialog"
+    [modal]="true"
+    [style]="{ width: '50vw' }"
+    [draggable]="true"
+    [resizable]="true">
+    <ng-container *ngTemplateOutlet="contentDialog"></ng-container>
+</p-dialog>
+
+
+<ng-template #contentDialog>
+    <form [formGroup]="form" (ngSubmit)="updateUser()">
+        <div style="display: flex; flex-direction: column">
+            <input
+                type="text"
+                formControlName="login"
+                pInputText
+                [placeholder]="'Login'"/>
+            <input
+                type="text"
+                pInputText
+                formControlName="firstName"
+                [placeholder]="'Ім`я'"
+                style="margin-top: 20px"/>
+            <input
+                type="text"
+                pInputText
+                formControlName="lastName"
+                [placeholder]="'Призвіще'"
+                style="margin-top: 20px"/>
+
+            <p-button
+                label="Змінити"
+                type="submit"
+                style="margin-top: 20px; display: flex; justify-content: end"
+                styleClass="p-button-raised p-button-text"></p-button>
+        </div>
+    </form>
+</ng-template>
