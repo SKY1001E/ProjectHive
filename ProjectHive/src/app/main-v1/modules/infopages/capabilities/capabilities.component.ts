@@ -49,7 +49,6 @@ export class CapabilitiesComponent implements OnInit, AfterViewInit {
             'text': 'Можна переглядати статистику щодо проекту, використовуючі різні інструменти',
             'color': 'rgb(91, 209, 255)'
         },
-        //rgb(255, 91, 187);
     ]
     constructor(
         private uiPart: UiPartService
