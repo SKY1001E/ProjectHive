@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 import { AddTaskComponent } from './add-task/add-task.component';
 import { RouterModule } from "@angular/router";
 import { ButtonModule } from "primeng/button";
@@ -19,9 +19,9 @@ import {ReactiveFormsModule} from "@angular/forms";
   imports: [
     CommonModule,
     RouterModule.forChild([
-        {path: '', redirectTo: 'add', pathMatch: 'full'},
+        {path: '', redirectTo: '/new', pathMatch: 'full'},
         {path: 'add/:managerId/:projectId', component: AddTaskComponent},
-        {path: 'task/:Id', component: TaskComponent},
+        {path: 'task/:id', component: TaskComponent},
       ]),
       NgTemplateOutlet,
       ButtonModule,
@@ -31,6 +31,7 @@ import {ReactiveFormsModule} from "@angular/forms";
   exports: [
     AddTaskComponent
   ],
-  providers: [MessageService]
+  providers: [MessageService,
+    DatePipe]
 })
 export class TasksModule { }

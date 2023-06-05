@@ -63,9 +63,9 @@ export class LoginComponent implements OnInit, AfterViewInit {
 
         this.authService.login(login)
             .subscribe(res => {
-                console.log(res)
-                console.log(this.authService.isAuthenticated())
-                this.router.navigate(['/project-page', 'projects']).then(() => {})
+                //console.log(res)
+                //console.log(this.authService.isAuthenticated())
+                this.router.navigate(['/projects', 'projects']).then(() => {})
             })
     }
 

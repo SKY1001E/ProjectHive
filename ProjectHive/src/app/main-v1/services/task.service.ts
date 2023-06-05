@@ -27,4 +27,8 @@ export class TaskService {
     updateTask(task: Task): Observable<any> {
         return this.http.put(`${Consts.LOCAL_API_URL}api/Task/update/${task.id}`, task);
     }
+
+    getTaskById(taskId: number): Observable<any> {
+        return this.http.get(`${Consts.LOCAL_API_URL}api/Task/id/${taskId}`)
+    }
 }

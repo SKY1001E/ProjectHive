@@ -44,49 +44,32 @@
                                         +
                                     </div>
                                 </div>
-                                <div class="task">
-                                    <div class="info">
+                                <ng-container *ngFor="let task of tasks">
+                                    <div class="task" [routerLink] = "['/tasks/task', task.id]" *ngIf="task.status == 'To do'">
+                                      <div class="info">
                                         <div class="main-info">
-                                            <div class="img-container">
-                                                <img src="assets/boards/complete.png" alt="" class="image">
-                                            </div>
-                                            <div class="name">
-                                                Завдання 1
-                                            </div>
+                                          <div class="img-container">
+                                            <img src="assets/boards/complete.png" alt="" class="image">
+                                          </div>
+                                          <div class="name">
+                                            {{ task.name }}
+                                          </div>
                                         </div>
-        
+                                  
                                         <div class="executor">
-                                            Загальне
+                                          {{ task.userId? "Особисте" : "Загальне" }}
                                         </div>
-                                    </div>
-                                    <div class="tags">
-                                        <div class="terms tag">04.06.2023</div>
+                                      </div>
+                                  
+                                      <div class="tags">
+                                        <div class="terms tag">{{ task.endDate | date:'dd.MM.yyyy'}}</div>
                                         <div class="marks tag">Normal</div>
-                                        <div class="priority tag">Пріоритет: звичайний</div>
-                                    </div>
-                                </div>
-
-                                <div class="task">
-                                    <div class="info">
-                                        <div class="main-info">
-                                            <div class="img-container">
-                                                <img src="assets/boards/complete.png" alt="" class="image">
-                                            </div>
-                                            <div class="name">
-                                                Завдання 2
-                                            </div>
+                                        <div class="priority tag">Пріоритет: {{ task.priority == 0 ? "понижений" :
+                                                                             (task.priority == 1 ? "звичайний" : "підвищений") }}
                                         </div>
-        
-                                        <div class="executor">
-                                            Загальне
-                                        </div>
+                                      </div>
                                     </div>
-                                    <div class="tags">
-                                        <div class="terms tag">04.06.2023</div>
-                                        <div class="marks tag">Normal</div>
-                                        <div class="priority tag">Пріоритет: звичайний</div>
-                                    </div>
-                                </div>
+                                </ng-container>
                             </div>
                         </div>
 
@@ -100,49 +83,32 @@
                                 В процесі
                             </div>
                             <div class="tasks">
-                                <div class="task">
-                                    <div class="info">
+                                <ng-container *ngFor="let task of tasks">
+                                    <div class="task" [routerLink] = "['/tasks/task', task.id]" *ngIf="task.status == 'In progress'">
+                                      <div class="info">
                                         <div class="main-info">
-                                            <div class="img-container">
-                                                <img src="assets/boards/complete.png" alt="" class="image">
-                                            </div>
-                                            <div class="name">
-                                                Завдання 1
-                                            </div>
+                                          <div class="img-container">
+                                            <img src="assets/boards/complete.png" alt="" class="image">
+                                          </div>
+                                          <div class="name">
+                                            {{ task.name }}
+                                          </div>
                                         </div>
-        
+                                  
                                         <div class="executor">
-                                            Загальне
+                                          {{ task.userId? "Особисте" : "Загальне" }}
                                         </div>
-                                    </div>
-                                    <div class="tags">
-                                        <div class="terms tag">04.06.2023</div>
+                                      </div>
+                                  
+                                      <div class="tags">
+                                        <div class="terms tag">{{ task.endDate | date:'dd.MM.yyyy'}}</div>
                                         <div class="marks tag">Normal</div>
-                                        <div class="priority tag">Пріоритет: звичайний</div>
-                                    </div>
-                                </div>
-
-                                <div class="task">
-                                    <div class="info">
-                                        <div class="main-info">
-                                            <div class="img-container">
-                                                <img src="assets/boards/complete.png" alt="" class="image">
-                                            </div>
-                                            <div class="name">
-                                                Завдання 2
-                                            </div>
+                                        <div class="priority tag">Пріоритет: {{ task.priority == 0 ? "понижений" :
+                                                                             (task.priority == 1 ? "звичайний" : "підвищений") }}
                                         </div>
-        
-                                        <div class="executor">
-                                            Загальне
-                                        </div>
+                                      </div>
                                     </div>
-                                    <div class="tags">
-                                        <div class="terms tag">04.06.2023</div>
-                                        <div class="marks tag">Normal</div>
-                                        <div class="priority tag">Пріоритет: звичайний</div>
-                                    </div>
-                                </div>
+                                </ng-container>
                             </div>
                         </div>
 
@@ -156,49 +122,32 @@
                                 Виконано
                             </div>
                             <div class="tasks">
-                                <div class="task">
-                                    <div class="info">
+                                <ng-container *ngFor="let task of tasks">
+                                    <div class="task" [routerLink] = "['/tasks/task', task.id]" *ngIf="task.status == 'Completed'">
+                                      <div class="info">
                                         <div class="main-info">
-                                            <div class="img-container">
-                                                <img src="assets/boards/complete.png" alt="" class="image">
-                                            </div>
-                                            <div class="name">
-                                                Завдання 1
-                                            </div>
+                                          <div class="img-container">
+                                            <img src="assets/boards/complete.png" alt="" class="image">
+                                          </div>
+                                          <div class="name">
+                                            {{ task.name }}
+                                          </div>
                                         </div>
-        
+                                  
                                         <div class="executor">
-                                            Загальне
+                                          {{ task.userId? "Особисте" : "Загальне" }}
                                         </div>
-                                    </div>
-                                    <div class="tags">
-                                        <div class="terms tag">04.06.2023</div>
+                                      </div>
+                                  
+                                      <div class="tags">
+                                        <div class="terms tag">{{ task.endDate | date:'dd.MM.yyyy'}}</div>
                                         <div class="marks tag">Normal</div>
-                                        <div class="priority tag">Пріоритет: звичайний</div>
-                                    </div>
-                                </div>
-
-                                <div class="task">
-                                    <div class="info">
-                                        <div class="main-info">
-                                            <div class="img-container">
-                                                <img src="assets/boards/complete.png" alt="" class="image">
-                                            </div>
-                                            <div class="name">
-                                                Завдання 2
-                                            </div>
+                                        <div class="priority tag">Пріоритет: {{ task.priority == 0 ? "понижений" :
+                                                                             (task.priority == 1 ? "звичайний" : "підвищений") }}
                                         </div>
-        
-                                        <div class="executor">
-                                            Загальне
-                                        </div>
+                                      </div>
                                     </div>
-                                    <div class="tags">
-                                        <div class="terms tag">04.06.2023</div>
-                                        <div class="marks tag">Normal</div>
-                                        <div class="priority tag">Пріоритет: звичайний</div>
-                                    </div>
-                                </div>
+                                </ng-container>
                             </div>
                         </div>
 

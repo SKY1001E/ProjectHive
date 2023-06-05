@@ -7,6 +7,8 @@ import { ActivatedRoute } from '@angular/router';
 import { UserService } from "src/app/main-v1/services/user.service";
 import { User } from "src/app/main-v1/models/user";
 import { MessageService } from "primeng/api";
+import { ProjectService } from "src/app/main-v1/services/project.service";
+import { Project } from "src/app/main-v1/models/project";
 
 
 @Component({
@@ -17,7 +19,10 @@ import { MessageService } from "primeng/api";
 export class AddTaskComponent implements OnInit, AfterViewInit {
     projectId: number = null;
     managerId: number = null;
+
     executor: User = null;
+    author: User = null;
+    project: Project = null;
 
     @ViewChild('headerTemplate') headerTemplate!: TemplateRef<any>;
     form!: FormGroup;
@@ -26,6 +31,7 @@ export class AddTaskComponent implements OnInit, AfterViewInit {
     constructor(public uiPart: UiPartService,
         private taskService: TaskService,
         private userService: UserService,
+        private projectService: ProjectService,
         private route: ActivatedRoute,
         private messageService: MessageService) {}
 
@@ -36,6 +42,12 @@ export class AddTaskComponent implements OnInit, AfterViewInit {
         this.route.params.subscribe(params => {
             this.projectId = parseInt(params['projectId']);
             this.managerId = parseInt(params['managerId']);
+
+            this.projectService.getProjectById(this.projectId).subscribe(
+                (response) => {
+                    this.project = response;
+                    console.log(this.project);
+            })
         })
     }
 
@@ -64,10 +76,10 @@ export class AddTaskComponent implements OnInit, AfterViewInit {
             startDate: new Date(),
             endDate: this.form.get('date')?.value ? this.form.get('date')?.value : new Date(),
             status: "To do",
-            priority: this.form.get('priority')?.value ? this.form.get('priority')?.value : "Normal",
+            priority: this.form.get('priority')?.value ? this.form.get('priority')?.value : "0",
             projectId: this.projectId,
             managerId: this.managerId,
-            userId: this.executor.id
+            userId: this.executor ? this.executor.id : null
         }
         console.log(task);
 
@@ -79,7 +91,7 @@ export class AddTaskComponent implements OnInit, AfterViewInit {
     addExecutor() {
         const email = this.executorForm.get('email').value;
         console.log(email);
-        if(email != null && email != undefined) {
+        if(email != null && email != undefined && email != "") {
             this.userService.getUserByEmail(email)
             .subscribe((user: User) => {
                 if(user != null) {

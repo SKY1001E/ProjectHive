@@ -1,6 +1,6 @@
 import {NgModule} from "@angular/core";
 import {ButtonModule} from "primeng/button";
-import {NgTemplateOutlet, NgForOf} from "@angular/common";
+import {NgTemplateOutlet, NgForOf, NgIf} from "@angular/common";
 import {ProjectPageComponent} from "./projectpage/projectpage.component";
 import {RouterModule} from "@angular/router";
 import {CreateProjectComponent} from "./create-project/create-project.component";
@@ -25,6 +25,7 @@ import { ToastModule } from 'primeng/toast';
     NgTemplateOutlet,
     ButtonModule,
     NgForOf,
+    NgIf,
     DatePipe,
     ReactiveFormsModule,
     ToastModule

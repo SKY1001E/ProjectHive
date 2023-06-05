@@ -115,7 +115,7 @@
         .add-task:hover {
             cursor: pointer;
             background-color: rgb(255, 145, 0); 
-            
+
         }
 
         .board__inner {
@@ -151,6 +151,7 @@
                 flex-direction: column;
                 padding: 20px;
                 gap: 20px;
+                
 
 
                 .task {

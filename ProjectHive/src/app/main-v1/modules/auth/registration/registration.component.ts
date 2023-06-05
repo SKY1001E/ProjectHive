@@ -43,7 +43,7 @@ export class RegistrationComponent implements OnInit, AfterViewInit{
             ])
         })
 
-        console.log(this.form)
+        //console.log(this.form)
     }
 
     registerUser() {

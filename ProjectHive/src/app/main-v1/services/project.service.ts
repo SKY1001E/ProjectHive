@@ -21,7 +21,6 @@ export class ProjectService {
     }
 
     getProjectById(projectId: number): Observable<any> {
-        console.log(projectId);
         return this.http.get(`${Consts.LOCAL_API_URL}api/Project/id/${projectId}`)
     }
 }

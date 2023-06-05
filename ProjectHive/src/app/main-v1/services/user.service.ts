@@ -39,7 +39,7 @@ export class UserService {
     }
 
     getUserById(userId: number): Observable<any> {
-        console.log(userId);
+        //console.log(userId);
         return this.http.get(`${Consts.LOCAL_API_URL}api/User/id/${userId}`)
     }
 }

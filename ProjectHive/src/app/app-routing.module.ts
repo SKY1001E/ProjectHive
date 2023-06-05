@@ -20,7 +20,7 @@ const routes: Routes = [
       },
       {path: 'projects',
           loadChildren: () => import('../app/main-v1/modules/projects/projects.module').then(m => m.ProjectPageModule),
-          //canActivate: [AuthGuard]
+          canActivate: [AuthGuard]
       },
       {
         path: 'info',
@@ -29,17 +29,17 @@ const routes: Routes = [
       {
         path: 'profile',
         loadChildren: () => import('../app/main-v1/modules/profile/profile.module').then(m => m.ProfileModule),
-         // canActivate: [AuthGuard]
+        canActivate: [AuthGuard]
       },
       {
         path: 'tasks',
         loadChildren: () => import('../app/main-v1/modules/tasks/tasks.module').then(m => m.TasksModule),
-         // canActivate: [AuthGuard]
+        canActivate: [AuthGuard]
       },
       {
         path: 'members',
         loadChildren: () => import('../app/main-v1/modules/members/members.module').then(m => m.MembersModule),
-         // canActivate: [AuthGuard]
+        canActivate: [AuthGuard]
       },
 
     ]

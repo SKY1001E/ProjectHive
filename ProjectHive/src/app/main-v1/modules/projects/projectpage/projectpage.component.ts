@@ -4,6 +4,7 @@ import { ButtonModule } from 'primeng/button';
 import { Project } from 'src/app/main-v1/models/project';
 import {ProjectService} from "../../../services/project.service";
 import { UserService } from 'src/app/main-v1/services/user.service';
+import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-projectpage',
@@ -19,7 +20,8 @@ export class ProjectPageComponent implements OnInit, AfterViewInit {
     constructor(
         public uiPart: UiPartService,
         private projectService: ProjectService,
-        private userService: UserService) {}
+        private userService: UserService,
+    ) {}
 
     ngOnInit(): void {
         this.uiPart.showMainNavbar.next(false);
@@ -29,7 +31,7 @@ export class ProjectPageComponent implements OnInit, AfterViewInit {
 
         this.projectService.getProjectsByUser(parseInt(userInfo.id)).subscribe((projects) => {
             this.projects = projects;
-            console.log(this.projects);
+            //console.log(this.projects);
         })
     }
 

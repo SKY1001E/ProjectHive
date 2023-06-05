@@ -41,7 +41,7 @@ export class ProjectMainComponent {
             this.userService.getUserById(this.project.userId).subscribe(
                 (response) => {
                     this.admin = response;
-                    console.log(this.admin);
+                    //console.log(this.admin);
             })})
     }
   
