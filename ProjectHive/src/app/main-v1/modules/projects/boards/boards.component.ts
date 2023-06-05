@@ -17,6 +17,7 @@ export class BoardsComponent {
     
     project: Project;
     admin: User;
+    currentUserId: number = null;
     
     @ViewChild('headerTemplate') headerTemplate!: TemplateRef<any>;
 
@@ -24,8 +25,10 @@ export class BoardsComponent {
                 private route: ActivatedRoute,
                 private projectService: ProjectService,
                 private userService: UserService) {}
-  
+        
     ngOnInit(): void {
+        this.currentUserId = parseInt(this.userService.getUserInfo().id)
+        console.log(this.userService.getUserInfo());
         this.uiPart.showMainNavbar.next(false);
         let project_id = 0;
         this.route.params.subscribe(params => {
@@ -39,7 +42,6 @@ export class BoardsComponent {
             this.userService.getUserById(this.project.userId).subscribe(
                 (response) => {
                     this.admin = response;
-                    console.log(this.admin);
             })})
     }
 }

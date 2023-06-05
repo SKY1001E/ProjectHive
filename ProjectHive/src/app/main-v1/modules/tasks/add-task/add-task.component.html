@@ -5,24 +5,24 @@
     <div class="ph-project-page__inner">
         <div class="container">
             <div class="bread-crumbs">
-                Проекти / Smart Farm / Завдання / Додавання Завдання
+                Проекти / PLACEHOLDER / Завдання / Додавання Завдання
             </div>
             <div class="arrow">
                 <p-button icon="pi pi-arrow-left" styleClass="p-button-rounded p-button-secondary p-button-text"></p-button>
             </div>
             <div class="add-task-form-container">
-                <form class="add-task-form" method="post">
+                <form class="add-task-form" method="post" [formGroup]="form" (ngSubmit)="addTask()">
                     <div class="add-task-form__inner">
                         <div class="add-task-form__main">
                             <div class="add-task-form__task-name">
                                 <label class="add-task-form__label section-name" for = "name">Назва завдання</label>
-                                <input class="add-task-form__name-input" id = "name" type="text">
+                                <input class="add-task-form__name-input" formControlName = "name" id = "name" type="text">
                             </div>
     
                             <div class="add-task-form__additional-info">
                                 <div class="add-task-form__task-marks add-task-form__additional-input">
                                     <label class="add-task-form__additional-input-label" for = "mark">Маркування задачі</label>
-                                    <select class="add-task-form__select-input" id = "mark" name="mark">
+                                    <select class="add-task-form__select-input" id = "mark" formControlName="mark">
                                         <option value="Burning">Normal</option>
                                         <option value="Burning">Burning</option>
                                         <option value="Burning">Optional</option>
@@ -31,12 +31,12 @@
     
                                 <div class="add-task-form__task-terms add-task-form__additional-input">
                                     <label class="add-task-form__additional-input-label" for = "date">Сроки</label>
-                                    <input class="add-task-form__select-input" type ="date" name="date" id = "date">
+                                    <input class="add-task-form__select-input" type ="date" formControlName="date" id = "date">
                                 </div>
     
                                 <div class="add-task-form__status add-task-form__additional-input">
-                                    <label class="add-task-form__additional-input-label" for = "stats">Пріоритет</label>
-                                    <select class="add-task-form__select-input" id = "mark">
+                                    <label class="add-task-form__additional-input-label" for = "priority">Пріоритет</label>
+                                    <select class="add-task-form__select-input" id = "priority" formControlName="priority">
                                         <option value="3">Підвищений</option>
                                         <option value="2">Звичайний</option>
                                         <option value="1">Понижений</option>
@@ -46,14 +46,14 @@
     
                             <div class="add-task-form__task-description">
                                 <label class="add-task-form__label section-name" for = "description">Опис завдання</label>
-                                <textarea name="description" class="add-task-form__textarea"></textarea>
+                                <textarea name="description" class="add-task-form__textarea" formControlName="description"></textarea>
                             </div>
     
                             <div class="add-task-form__attachments">
                                 <p class="add-task-form__label section-name">Вкладення</p>
                                 <div class="add-task-form__attachments-container">
                                     <div class="attachment">
-                                        <p>Постановка завдання.pdf</p>
+                                        <p></p>
                                     </div>
                                 </div>
                                 <div style="margin-top: 15px">
@@ -79,15 +79,19 @@
                                         Виконавець
                                     </div>
                                     <div class="author__name">
-                                        Не назначено
+                                        {{ executor ?  (executor.firstName + ' ' + executor.lastName + ' (' + executor.email + ')') : "Не назначено" }}
                                     </div>
                                 </div>
                                 
                                 <div class="add-executor">
-                                    <form action="" class="add-executor-form">
-                                        <input class="add-executor-form__email-input" type="email" placeholder="email@mail.com" name="email">
+                                    <form class="add-executor-form" [formGroup]="executorForm" (ngSubmit)="addExecutor()">
+                                        <input class="add-executor-form__email-input" type="email" placeholder="email@mail.com" formControlName="email">
                                         <input class="add-executor__submit-button" type="submit" value="Назначити">
                                     </form>
+
+                                    <input type="button" class ="add-executor__submit-button" style="margin-top: 10px; width: 100%" (click)="removeExecutor()" value = "Видалити виконавця">
+
+                                    
                                 </div>
                             </div>
     
@@ -106,10 +110,12 @@
     
                     <div class="add-task-form__submit-button-container">
                         <input class = "add-task-form__submit-button" type="submit" value="Додати завдання">
-                    </div>
-    
+                    </div>     
+
                 </form>
             </div>
         </div>
     </div>
 </div>
+
+<p-toast></p-toast>

@@ -38,7 +38,7 @@ export class CreateProjectComponent implements OnInit, AfterViewInit{
             userId: this.userService.getUserInfo().id
         }
 
-        console.log(project);
+        //console.log(project);
 
         this.projectService.addProject(project).subscribe((response) => {
             })

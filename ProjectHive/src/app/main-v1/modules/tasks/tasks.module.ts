@@ -5,26 +5,32 @@ import { RouterModule } from "@angular/router";
 import { ButtonModule } from "primeng/button";
 import { NgTemplateOutlet } from "@angular/common";
 import { TaskComponent } from './task/task.component';
+import { MessageService } from "primeng/api";
+import { ToastModule } from 'primeng/toast';
+import {ReactiveFormsModule} from "@angular/forms";
 
 
 
 @NgModule({
   declarations: [
     AddTaskComponent,
-    TaskComponent
+    TaskComponent,
   ],
   imports: [
     CommonModule,
     RouterModule.forChild([
         {path: '', redirectTo: 'add', pathMatch: 'full'},
-        {path: 'add', component: AddTaskComponent},
-        {path: 'task', component: TaskComponent},
+        {path: 'add/:managerId/:projectId', component: AddTaskComponent},
+        {path: 'task/:Id', component: TaskComponent},
       ]),
       NgTemplateOutlet,
-      ButtonModule
+      ButtonModule,
+      ReactiveFormsModule,
+      ToastModule,
   ],
   exports: [
     AddTaskComponent
   ],
+  providers: [MessageService]
 })
 export class TasksModule { }

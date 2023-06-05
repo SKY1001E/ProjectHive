@@ -10,10 +10,10 @@
                 </div>
                 <div class="project-info__text">
                     <div class="project-info__title">
-                        Project title
+                        {{project.title}}
                     </div>
                     <div class="project-info__description">
-                        description
+                        {{project.description}}
                     </div>
                 </div>
 
@@ -27,7 +27,7 @@
         </aside>
         <div class="content">
             <div class="bread-crumbs">
-                Проекти / Smart Farm / Дошки
+                Проекти / {{ project.title }} / Дошки
             </div>
             <div class="content__inner">
                 <div class="boards">
@@ -37,7 +37,13 @@
                             <div class="head head_complete">
                                 Виконати
                             </div>
+
                             <div class="tasks">
+                                <div class="add-task" >
+                                    <div class="plus" [routerLink] = "['/tasks/add', currentUserId, project.id]">
+                                        +
+                                    </div>
+                                </div>
                                 <div class="task">
                                     <div class="info">
                                         <div class="main-info">
