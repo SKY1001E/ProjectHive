@@ -19,9 +19,9 @@
 
             </div>
             <div class="side-menu">
-                <button class="side-menu__button side-menu__button_inactive">Головна</button>
-                <button class="side-menu__button side-menu__button_active">Дошки</button>
-                <button class="side-menu__button side-menu__button_inactive" >Учасники</button>
+                <button [routerLink] = "['../../project', project.id]" class="side-menu__button side-menu__button_inactive">Головна</button>
+                <button [routerLink] = "['../../boards', project.id]" class="side-menu__button side-menu__button_active">Дошки</button>
+                <button [routerLink] = "['../../members', project.id]" class="side-menu__button side-menu__button_inactive" >Учасники</button>
                 <button class="side-menu__button side-menu__button_inactive">Налаштування</button>
             </div>
         </aside>

@@ -18,9 +18,9 @@ import { ToastModule } from 'primeng/toast';
       {path: '', redirectTo: 'projects', pathMatch: 'full'},
       {path: 'projects', component: ProjectPageComponent},
       {path: 'create', component: CreateProjectComponent},
-      {path: 'project-main', component: ProjectMainComponent},
-      {path: 'boards', component: BoardsComponent},
-      {path: 'members', component: MembersPageComponent}
+      {path: 'project/:id', component: ProjectMainComponent},
+      {path: 'boards/:id', component: BoardsComponent},
+      {path: 'members/:id', component: MembersPageComponent}
     ]),
     NgTemplateOutlet,
     ButtonModule,

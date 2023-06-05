@@ -18,7 +18,7 @@ const routes: Routes = [
       {path: 'sign',
         loadChildren: () => import('../app/main-v1/modules/auth/auth.module').then(m => m.AuthModule)
       },
-      {path: 'project-page',
+      {path: 'projects',
           loadChildren: () => import('../app/main-v1/modules/projects/projects.module').then(m => m.ProjectPageModule),
           //canActivate: [AuthGuard]
       },

@@ -1,6 +1,6 @@
 <div class="ph-project-page">
   <div>
-    <ng-container *ngTemplateOutlet="uiParts.headerTemplate"></ng-container>
+    <ng-container *ngTemplateOutlet="uiPart.headerTemplate"></ng-container>
   </div>
   <div class="ph-project-page__inner">
     <aside class="sidebar">
@@ -18,9 +18,9 @@
         </div>
       </div>
       <div class="side-menu">
-        <button class="side-menu__button side-menu__button_inactive">Головна</button>
-        <button class="side-menu__button side-menu__button_inactive">Дошки</button>
-        <button class="side-menu__button side-menu__button_active">Учасники</button>
+        <button [routerLink] = "['../../project', project.id]" class="side-menu__button side-menu__button_inactive">Головна</button>
+        <button [routerLink] = "['../../boards', project.id]" class="side-menu__button side-menu__button_inactive">Дошки</button>
+        <button [routerLink] = "['../../members', project.id]" class="side-menu__button side-menu__button_active" >Учасники</button>
         <button class="side-menu__button side-menu__button_inactive">Налаштування</button>
       </div>
     </aside>

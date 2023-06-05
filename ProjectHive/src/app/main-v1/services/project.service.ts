@@ -21,6 +21,11 @@ export class ProjectService {
         return this.http.post(`${Consts.LOCAL_API_URL}api/Project/create`, project);
     }
 
+    getProjectById(projectId: number): Observable<any> {
+        console.log(projectId);
+        return this.http.get(`${Consts.LOCAL_API_URL}api/Project/id/${projectId}`)
+    }
+
     /*getUserInfo(): any {
         const jwtToken = localStorage.getItem('token');
         const tokenInfo = this.getDecodedAccessToken(jwtToken!);

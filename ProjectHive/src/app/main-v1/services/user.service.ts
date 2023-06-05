@@ -37,4 +37,9 @@ export class UserService {
             return null;
         }
     }
+
+    getUserById(userId: number): Observable<any> {
+        console.log(userId);
+        return this.http.get(`${Consts.LOCAL_API_URL}api/User/id/${userId}`)
+    }
 }

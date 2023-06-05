@@ -10,24 +10,24 @@
                 </div>
                 <div class="project-info__text">
                     <div class="project-info__title">
-                        Project title
+                        {{project.title}}
                     </div>
                     <div class="project-info__description">
-                        description
+                        {{project.description}}
                     </div>
                 </div>
 
             </div>
             <div class="side-menu">
-                <button class="side-menu__button side-menu__button_active">Головна</button>
-                <button class="side-menu__button side-menu__button_inactive">Дошки</button>
-                <button class="side-menu__button side-menu__button_inactive" >Учасники</button>
+                <button [routerLink] = "['../../project', project.id]" class="side-menu__button side-menu__button_active">Головна</button>
+                <button [routerLink] = "['../../boards', project.id]" class="side-menu__button side-menu__button_inactive">Дошки</button>
+                <button [routerLink] = "['../../members', project.id]" class="side-menu__button side-menu__button_inactive" >Учасники</button>
                 <button class="side-menu__button side-menu__button_inactive">Налаштування</button>
             </div>
         </aside>
         <div class="content">
             <div class="bread-crumbs">
-                Проекти / Smart Farm / Головна
+                Проекти / {{project.title}} / Головна
             </div>
             <div class="content__inner">
                 <div class="project-head">
@@ -37,7 +37,7 @@
                         </div>
                         <div class="leader__text">
                             <div class="leader__name">
-                                Name Surname
+                                {{ admin.firstName }} {{ admin.lastName }}
                             </div>
                             <div class="leader__role">
                                 адміністратор
@@ -46,18 +46,18 @@
                     </div>
                     <div class="project-head__main-info">
                         <div class="project-head__title">
-                            Project title
+                            {{project.title}}
                         </div>
                         <div class="project-head__description">
-                            description
+                            {{project.description}}
                         </div>
                     </div>
                     <div class="project-head__dates">
                         <div class="project-head__start-date">
-                            Дата початку: ******
+                            Дата початку: {{ project.startDate | date:'dd.MM.yyyy' }}
                         </div>
                         <div class="project-head__end-date">
-                            Дата закінчення: ******
+                            Дата закінчення: {{ project.endDate | date:'dd.MM.yyyy' }}
                         </div>
                     </div>
                 </div>
