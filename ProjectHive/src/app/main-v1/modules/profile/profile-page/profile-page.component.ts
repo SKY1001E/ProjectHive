@@ -69,7 +69,6 @@ export class ProfilePageComponent implements OnInit, AfterViewInit{
     private getUser() {
         const email = this.userService.getUserInfo().email;
 
-
         this.userService.getUserByEmail(email)
             .subscribe((user: User) => {
                 this.user = user;

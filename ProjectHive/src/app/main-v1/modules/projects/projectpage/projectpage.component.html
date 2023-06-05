@@ -20,23 +20,11 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Проект 1</td>
-                    <td>Опис проекту 1</td>
-                    <td>Строки 1</td>
-                    <td>Керівник 1</td>
-                </tr>
-                <tr>
-                    <td>Проект 2</td>
-                    <td>Опис проекту 2</td>
-                    <td>Строки 2</td>
-                    <td>Керівник 2</td>
-                </tr>
-                <tr>
-                    <td>Проект 3</td>
-                    <td>Опис проекту 3</td>
-                    <td>Строки 3</td>
-                    <td>Керівник 3</td>
+                <tr *ngFor="let project of projects">
+                    <td>{{ project.title }}</td>
+                    <td>{{ project.description }}</td>
+                    <td>{{ project.endDate | date:'dd.MM.yyyy' }}</td>
+                    <td>{{ project.userId }}</td>
                 </tr>
             </tbody>
         </table>

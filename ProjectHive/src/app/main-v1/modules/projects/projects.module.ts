@@ -1,12 +1,16 @@
 import {NgModule} from "@angular/core";
 import {ButtonModule} from "primeng/button";
-import {NgTemplateOutlet} from "@angular/common";
+import {NgTemplateOutlet, NgForOf} from "@angular/common";
 import {ProjectPageComponent} from "./projectpage/projectpage.component";
 import {RouterModule} from "@angular/router";
 import {CreateProjectComponent} from "./create-project/create-project.component";
 import { ProjectMainComponent } from './project-main/project-main.component';
 import { BoardsComponent } from './boards/boards.component';
 import { MembersPageComponent } from './members-page/members-page.component';
+import { DatePipe } from '@angular/common';
+import {ReactiveFormsModule} from "@angular/forms";
+import {MessageService} from "primeng/api";
+import { ToastModule } from 'primeng/toast';
 
 @NgModule({
   imports: [
@@ -19,11 +23,16 @@ import { MembersPageComponent } from './members-page/members-page.component';
       {path: 'members', component: MembersPageComponent}
     ]),
     NgTemplateOutlet,
-    ButtonModule
+    ButtonModule,
+    NgForOf,
+    DatePipe,
+    ReactiveFormsModule,
+    ToastModule
   ],
   exports: [
-    ProjectPageComponent
+    ProjectPageComponent,
   ],
+  providers: [MessageService],
   declarations: [
     ProjectPageComponent,
     CreateProjectComponent,
