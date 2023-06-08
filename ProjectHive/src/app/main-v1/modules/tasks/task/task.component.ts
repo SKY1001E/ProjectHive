@@ -79,7 +79,7 @@ export class TaskComponent  implements OnInit, AfterViewInit{
             status: new FormControl(null)
         })
 
-        this.form.get('date').setValue(this.task.endDate);
+        this.form.get('date').setValue(this.datePipe.transform(this.task.endDate, 'yyyy-MM-dd'));
         this.form.get('name').setValue(this.task.name);
         this.form.get('description').setValue(this.task.description);
         this.form.get('status').setValue(this.task.status);
@@ -103,7 +103,7 @@ export class TaskComponent  implements OnInit, AfterViewInit{
             priority: this.form.get('priority')?.value ? this.form.get('priority')?.value : this.task.priority,
             projectId: this.project.id,
             managerId: this.author.id,
-            userId: this.executor.id
+            userId: this.executor ? this.executor.id : null
         }
         console.log(task);
 
